@@ -65,25 +65,25 @@
                             <th>Address</th>
                         </thead>
                         <tbody>
-                            <tr onclick="handleRowClick(this)">
+                            <tr data-customer-id="1" onclick="handleRowClick(this)">
                                 <td>John</td>
                                 <td>Doe</td>
                                 <td>123-456-7890</td>
                                 <td>123 Main St, City</td>
                             </tr>
-                            <tr onclick="handleRowClick(this)">
+                            <tr  data-customer-id="2" onclick="handleRowClick(this)">
                                 <td>Jane</td>
                                 <td>Smith</td>
                                 <td>987-654-3210</td>
                                 <td>456 Elm St, Town</td>
                             </tr>
-                            <tr onclick="handleRowClick(this)">
+                            <tr  data-customer-id="3" onclick="handleRowClick(this)">
                                 <td>Alice</td>
                                 <td>Johnson</td>
                                 <td>555-555-5555</td>
                                 <td>789 Oak St, Village</td>
                             </tr>
-                            <tr onclick="handleRowClick(this)">
+                            <tr data-customer-id="4" onclick="handleRowClick(this)">
                                 <td>Alvin</td>
                                 <td>Johnson</td>
                                 <td>324-555-5555</td>
@@ -91,44 +91,33 @@
                             </tr>
                         </tbody>
                     </table>
-                    <a type="button" id="edit-button" onclick="goToEditPage()">Edit</a>
+                    <a id="edit-button" onclick="goToEditPage()">Edit</a>
                 </div>
-                <div class="class=customerInvetoryTableSplit-Inv">
-                    <h2>Inventory</h2>
+                <div class="customerEquipmentTableSplit-Inv">
+                    <h2>Equipment</h2>
                     <table>
+                        
                         <thead>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Serial Number</th>
-                            <th>Purchase Date</th>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Serial Number</th>
+                                <th>Purchase Date</th>
+                            </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>GreenMachine 2000</td>
-                                <td>LM2000-12345</td>
-                                <td>2022-05-10</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>LawnMaster Pro</td>
-                                <td>LMPro-54321</td>
-                                <td>2022-04-22</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>TurboCut X300</td>
-                                <td>LMX300-67890</td>
-                                <td>2022-06-15</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>GrassBlaster Deluxe</td>
-                                <td>LMGDX-13579</td>
-                                <td>2022-07-03</td>
-                            </tr>
+                        <tbody id="EquipmentTableBody">
+                            <!-- Equipment table rows will be dynamically populated here -->
                         </tbody>
                     </table>
+                    <div class="customerInventoryContainerControls defaultControls">
+                        <div class="customerInventoryContainerEdit"> 
+                            <a href="equipmentEdit.html" id="Equipment-edit-button" onclick="goToEquipmentEditPage()">Edit</a>
+                        </div>
+                        <div class="customerInventoryContainerCreate">
+                            <a href="equipmentCreate.html" id="Equipment-create-button" onclick="goToEquipmentCreatePage()">Create</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
