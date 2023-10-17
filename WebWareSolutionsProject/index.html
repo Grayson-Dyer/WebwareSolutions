@@ -10,23 +10,136 @@
     <!--  link to additional stylesheets or libraries here -->
 
     <!-- link to your JavaScript file here -->
-    <script src="assets/js/script.js"></script>
-
+    <script src="assets/js/customerIndex.js"></script>
     <!-- include additional JavaScript libraries here -->
 </head>
 <body>
     <!-- Navigation Bar -->
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"><img src="images/logo.webp" alt="Company Logo"></a>
+                </li>
+                <li class="navbar-item-1">
+                    <a href="www.google.com">Link</a>
+                </li>
+                <li class="navbar-item-2">
+                    <a href="www.google.com">Link</a>
+                </li>
+                <li class="navbar-item-3">
+                    <a href="www.google.com">Link</a>
+                </li>
+                <li class="navbar-item-4">
+                    <a href="www.google.com">Link</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Page Content -->
     <main>
         <!-- webpage content goes here -->
-        <h1>This is test content!</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac dui eu augue facilisis luctus. In fringilla purus non tristique gravida. Vestibulum vel arcu at nulla facilisis fermentum. Maecenas convallis, risus quis dapibus consectetur, elit massa venenatis nunc, eget efficitur nulla felis et elit. Vivamus vel semper nulla. Nulla facilisi. Donec in justo eu urna hendrerit hendrerit. Quisque et odio ut velit scelerisque pharetra in at quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin in consectetur turpis. Integer eget libero nec turpis pharetra tristique vel sed metus. Nunc pharetra justo non ipsum ultrices, ut vestibulum ipsum tincidunt.</p>
+        <div class="NewOrderOptions defaultControls">
+            <nav>
+                <ul>
+                    <li class="NewOrderOptions-Item-1">
+                        <a href="customerCreate.html">New Customer</a>
+                    </li>
+                    <li class="NewOrderOptions-Item-2">
+                        <a href="www.google.com">Existing Customer</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <section>
+            <div class="customerInventoryTableSplit defaultTable defaultControls">
+                <div class="customerInvetoryTableSplit-Cust">
+                    <h2>Customer</h2>
+                    <table >
+                        <thead>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Number</th>
+                            <th>Address</th>
+                        </thead>
+                        <tbody>
+                            <tr onclick="handleRowClick(this)">
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>123-456-7890</td>
+                                <td>123 Main St, City</td>
+                            </tr>
+                            <tr onclick="handleRowClick(this)">
+                                <td>Jane</td>
+                                <td>Smith</td>
+                                <td>987-654-3210</td>
+                                <td>456 Elm St, Town</td>
+                            </tr>
+                            <tr onclick="handleRowClick(this)">
+                                <td>Alice</td>
+                                <td>Johnson</td>
+                                <td>555-555-5555</td>
+                                <td>789 Oak St, Village</td>
+                            </tr>
+                            <tr onclick="handleRowClick(this)">
+                                <td>Alvin</td>
+                                <td>Johnson</td>
+                                <td>324-555-5555</td>
+                                <td>849 Spruce St, Hamlet</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a type="button" id="edit-button" onclick="goToEditPage()">Edit</a>
+                </div>
+                <div class="class=customerInvetoryTableSplit-Inv">
+                    <h2>Inventory</h2>
+                    <table>
+                        <thead>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Serial Number</th>
+                            <th>Purchase Date</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>GreenMachine 2000</td>
+                                <td>LM2000-12345</td>
+                                <td>2022-05-10</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>LawnMaster Pro</td>
+                                <td>LMPro-54321</td>
+                                <td>2022-04-22</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>TurboCut X300</td>
+                                <td>LMX300-67890</td>
+                                <td>2022-06-15</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>GrassBlaster Deluxe</td>
+                                <td>LMGDX-13579</td>
+                                <td>2022-07-03</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer>
-        <!-- footer content goes here -->
-    </footer>
+    <div id="footer">
+        <footer>
+            <p>This page was made by Grayson Dyer!</p>
+        </footer>
+    </div>
+
 </body>
 </html>

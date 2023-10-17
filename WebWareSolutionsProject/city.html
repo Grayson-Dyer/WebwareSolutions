@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <!-- link to your CSS file here -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!--  link to additional stylesheets or libraries here -->
+
+    <!-- link to your JavaScript file here -->
+
+    <!-- include additional JavaScript libraries here -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"><img src="images/logo.webp" alt="Company Logo"></a>
+                </li>
+                <li class="navbar-item-1">
+                    <a href="www.google.com">Link</a>
+                </li>
+                <li class="navbar-item-2">
+                    <a href="www.google.com">Link</a>
+                </li>
+                <li class="navbar-item-3">
+                    <a href="www.google.com">Link</a>
+                </li>
+                <li class="navbar-item-4">
+                    <a href="www.google.com">Link</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!-- Page Content -->
+    <main>
+        <!-- webpage content goes here -->
+        <div class="defaultContainer">
+            <h1>Cities</h1>
+            <div class="defaultTable">
+                <table>
+                    <thead>
+                        <th>City ID</th>
+                        <th>City</th>
+
+                    </thead>
+                    <tbody>
+                        <tr onclick="handleRowClick(this)">
+                            <td>1</td>
+                            <td>Los Angeles</td>
+                        </tr>
+                        <tr onclick="handleRowClick(this)">
+                            <td>2</td>
+                            <td>San Francisco</td>
+                        </tr>
+                        <tr onclick="handleRowClick(this)">
+                            <td>3</td>
+                            <td>Houston</td>
+                        </tr>
+                        <tr onclick="handleRowClick(this)">
+                            <td>4</td>
+                            <td>Austin</td>
+                        </tr>
+                        <tr onclick="handleRowClick(this)">
+                            <td>5</td>
+                            <td>Toronto</td>
+                        </tr>
+                        <tr onclick="handleRowClick(this)">
+                            <td>6</td>
+                            <td>Ottawa</td>
+                        </tr><tr onclick="handleRowClick(this)">
+                            <td>7</td>
+                            <td>Montreal</td>
+                        </tr><tr onclick="handleRowClick(this)">
+                            <td>8</td>
+                            <td>Quebec City</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="defaultControls cityContainerControls">
+                <div class="cityContainerCreate">
+                    <a href="cityEdit.html" >Edit city</a>
+                </div>
+                <div class="cityContainerDelete">
+                    <a href="cityCreate.html" >New city</a>
+                </div>
+            </div> 
+        </div>
+    </main>
+
+
+</body>
+</html>
