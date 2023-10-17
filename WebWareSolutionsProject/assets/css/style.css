@@ -56,6 +56,7 @@ html, body {
     text-decoration: none;
     color: #f7fff6;			
     margin: 10px auto;
+    border-radius: 10px;
 }
 
 .defaultControls a:hover {
@@ -159,6 +160,7 @@ html, body {
     padding: 15px;
 }
 
+
 .formContainerControls input:hover {
     background-color: #2061d3;
     cursor: pointer;
@@ -199,7 +201,6 @@ html, body {
     text-align: center;
 }
 
-
 .NewOrderOptions {
     margin: 40px auto;
     width: 75%;
@@ -227,7 +228,7 @@ html, body {
 
 .customerInventoryTableSplit {
     grid-template-areas: 
-    "customerInvetoryTableSplit-Cust customerInvetoryTableSplit-Inv";
+    "customerInvetoryTableSplit-Cust customerEquipmentTableSplit-Inv";
     width: 75%;
     margin: 50px auto;
 }
@@ -237,7 +238,7 @@ html, body {
     color: #2061d3;
 }
 
-.customerInventoryTableSplit div {
+.customerInvetoryTableSplit-Cust, .customerEquipmentTableSplit-Inv {
     display: block;
     background-color: #bcebcb;
     border-style: solid;
@@ -253,6 +254,29 @@ html, body {
     width: 95%; 
     border-radius: 20px;
 }
+
+.customerInventoryContainerControls {
+    display: grid;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "customerInventoryContainerEdit customerInventoryContainerCreate";
+}
+
+#Equipment-create-button , #Equipment-edit-button  {
+    border-style: none;
+    display: none;
+    font-size: 18px;
+    background: #1e91d6;
+    color: #f7fff6;			
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 10px;
+    padding: 15px;
+}
+
 
 #footer {
     display: block;
