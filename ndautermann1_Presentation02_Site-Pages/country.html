@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <!-- link to your CSS file here -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!--  link to additional stylesheets or libraries here -->
+    <!-- link to your JavaScript file here -->
+    <!-- include additional JavaScript libraries here -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"><img src="images/logo.webp" alt="Company Logo"></a>
+                </li>
+                <li class="navbar-item-1">
+                    <a href="www.google.com">Link</a>
+                </li>
+                <li class="navbar-item-2">
+                    <a href="www.google.com">Link</a>
+                </li>
+                <li class="navbar-item-3">
+                    <a href="www.google.com">Link</a>
+                </li>
+                <li class="navbar-item-4">
+                    <a href="www.google.com">Link</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!-- Page Content -->
+    <main>
+        <!-- webpage content goes here -->
+        <div class="defaultContainer">
+            <h1>Countries</h1>
+            <div class="defaultTable">
+                <table>
+                    <thead>
+                    <th>Country ID</th>
+                    <th>Country</th>
+
+                    </thead>
+                    <tbody>
+                        <tr onclick="handleRowClick(this)">
+                            <td>1</td>
+                            <td>Canada</td>
+                        </tr>
+                        <tr onclick="handleRowClick(this)">
+                            <td>2</td>
+                            <td>United States of America</td>
+                        </tr>
+                        <tr onclick="handleRowClick(this)">
+                            <td>3</td>
+                            <td>Mexico</td>
+                        </tr>
+                        <tr onclick="handleRowClick(this)">
+                            <td>4</td>
+                            <td>United Kingdom</td>
+                        </tr>
+                        <tr onclick="handleRowClick(this)">
+                            <td>5</td>
+                            <td>France</td>
+                        </tr>
+                        <tr onclick="handleRowClick(this)">
+                            <td>6</td>
+                            <td>Germany</td>
+                        </tr>
+                        <tr onclick="handleRowClick(this)">
+                            <td>7</td>
+                            <td>Russia</td>
+                        </tr>
+                        <tr onclick="handleRowClick(this)">
+                            <td>8</td>
+                            <td>China</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+<!--Chose to keep these as cityContainer[X] since I'd rather not mess with the style sheet, and nothing new seems needed yet.-->
+            <div class="defaultControls cityContainerControls">
+                <div class="cityContainerCreate">
+                    <a href="countryEdit.html">Edit Country</a>
+                </div>
+                <div class="cityContainerDelete">
+                    <a href="countryCreate.html">New Country</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+</html>
