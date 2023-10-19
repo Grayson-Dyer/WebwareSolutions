@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Provinces</title>
+    <title>Manufacturers</title>
     <!-- link to your CSS file here -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -46,63 +46,53 @@
 
     <!-- Page Content -->
     <main>
+    
         <!-- webpage content goes here -->
         <div class="defaultContainer">
-            <h1>Provinces</h1>
+            <h1>Manufacturers</h1>
             <div class="defaultTable">
                 <table>
                     <thead>
-                        <th>Province ID</th>
-                        <th>Province</th>
+                        <th>Manufacturer ID</th>
+                        <th>Manufacturer</th>
                     </thead>
                     <tbody>
-                        <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="8">
-                            <td>1</td>
-                            <td>Ontario</td>
+                        <tr onclick="handleRowClick(this)"  onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="9">
+                            <td>01</td>
+                            <td>Ryobi </td>
                         </tr>
-                        <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="9">
-                            <td>2</td>
-                            <td>Quebec</td>
+                        <tr   onclick="handleRowClick(this)"  onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="10">
+                            <td>02</td>
+                            <td>Honda </td>
                         </tr>
-                        <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="10">
-                            <td>3</td>
-                            <td>Nova Scotia</td>
+                        <tr   onclick="handleRowClick(this)"  onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="11">
+                            <td>03</td>
+                            <td>Toro</td>
                         </tr>
-                        <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="11">
-                            <td>4</td>
-                            <td>New Brunswick</td>
-                        </tr>
-                        <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="12">
-                            <td>5</td>
-                            <td>Manitoba</td>
-                        </tr>
-                        <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="13">
-                            <td>6</td>
-                            <td>British Columbia</td>
-                        </tr>
-                        <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="14">
-                            <td>7</td>
-                            <td>Prince Edward Island</td>
-                        </tr>
-                        <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="15">
-                            <td>8</td>
-                            <td>Saskatchewan</td>
+                        <tr onclick="handleRowClick(this)"  onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="12">
+                            <td>04 </td>
+                            <td>Husqvarna</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 <!--Chose to keep these as cityContainer[X] since I'd rather not mess with the style sheet, and nothing new seems needed yet.-->
             <div class="defaultControls cityContainerControls">
-                <div class="cityContainerCreate">
-                    <a id="defaultEditButton" href="provinceEdit.html" tabindex="16">Edit Province</a>
+                <div class="cityContainerEdit">
+                    <a id="defaultEditButton" tabindex="13" href="manufacturerEdit.html">Edit manufacturer</a>
                 </div>
-                <div class="cityContainerDelete">
-                    <a href="provinceCreate.html" tabindex="17">New Province</a>
+                <div class="cityContainerCreate">
+                    <a href="manufacturerCreate.html" tabindex="14">New manufacturer</a>
                 </div>
             </div>
         </div>
     </main>
 
-
+    <!-- Footer -->
+    <div id="footer">
+        <footer>
+            <p>This page was made by Amron Weeber</p>
+        </footer>
+    </div>
 </body>
 </html>

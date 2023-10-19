@@ -7,9 +7,9 @@
     <!-- link to your CSS file here -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-
     <!--  link to additional stylesheets or libraries here -->
     <!-- link to your JavaScript file here -->
+    <script src="assets/js/provinceValidation.js"></script>
     <!-- include additional JavaScript libraries here -->
 </head>
 <body>
@@ -18,38 +18,44 @@
         <nav>
             <ul>
                 <li>
-                    <a href="index.html"><img src="images/logo.webp" alt="Company Logo"></a>
+                    <a href="index.html"><img src="images/logo.webp" alt="Company Logo" tabindex="1"></a>
                 </li>
                 <li class="navbar-item-1">
-                    <a href="www.google.com">Link</a>
+                    <a tabindex="2" href="index.html">Customer, Equipment</a>
                 </li>
                 <li class="navbar-item-2">
-                    <a href="www.google.com">Link</a>
+                    <a href="province.html" tabindex="3">Province</a>
                 </li>
                 <li class="navbar-item-3">
-                    <a href="www.google.com">Link</a>
+                    <a href="country.html" tabindex="4">Country</a>
                 </li>
                 <li class="navbar-item-4">
-                    <a href="www.google.com">Link</a>
+                    <a href="city.html" tabindex="5">City</a>
+                </li>
+                <li class="navbar-item-5">
+                    <a href="manufacturer.html" tabindex="6">Manufacturer</a>
+                </li>
+                <li>
+                    <a href="color.html" tabindex="7">Colour</a>
                 </li>
             </ul>
         </nav>
     </div>
-
     <!-- Page Content -->
     <main>
+        <div  class="formBackButton"><input tabindex="8" onclick="history.back()" onkeydown="if (event.keyCode == 13) {history.back()}" value="Back" type="button"></div> 
         <!-- webpage content goes here -->
         <div class="formContainer defaultContainer">
             <h1>Create Province</h1>
             <form action="province.html" method="get">
                 <label for="provinceName">Province Name</label>
-                <input type="text" id="provinceName" name="provinceName" required><br><br>
+                <input type="text" id="provinceName" name="provinceName" tabindex="9" required><br><br>
                 <div class="defaultControls formContainerControls">
                     <div class="formContainerSubmit">
-                        <input value="submit" type="submit" onclick="return validateForm();" id="formSubmit">
+                        <input  tabindex="10" value="submit" type="submit" onkeydown="if (event.keyCode == 13) {return validateForm();}" onclick="return validateForm();" id="formSubmit">
                     </div>
                     <div class="formContainerClear">
-                        <input value="clear" type="reset" id="formClear">
+                        <input value="clear" type="reset" tabindex="11" id="formClear">
                     </div>
                 </div>
             </form>

@@ -76,6 +76,7 @@ function populateEquipmentTable(customerId) {
     // Clear existing rows in the Equipment table
     EquipmentTableBody.innerHTML = "";
 
+    let tabIndex = 14;
     // Populate the Equipment table with the sample data
     EquipmentItems.forEach(item => {
         const row = EquipmentTableBody.insertRow();
@@ -91,6 +92,9 @@ function populateEquipmentTable(customerId) {
         purchaseDateCell.textContent = item.purchaseDate;
 
         row.setAttribute("onclick", "handleRowClickTwo(this)");
+        row.setAttribute("onkeydown", "if (event.keyCode == 13) {handleRowClickTwo(this)}")
+        row.setAttribute("tabindex", tabIndex);
+        tabIndex = tabIndex + 1;
     });
 }
 
