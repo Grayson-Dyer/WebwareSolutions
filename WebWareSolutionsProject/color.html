@@ -10,8 +10,8 @@
 
     <!--  link to additional stylesheets or libraries here -->
     <!-- link to your JavaScript file here -->
-    <script src="assets/js/tableSelectScript.js"></script>
     <!-- include additional JavaScript libraries here -->
+    <script src="assets/js/tableSelectScript.js"></script>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -48,45 +48,29 @@
     <main>
         <!-- webpage content goes here -->
         <div class="defaultContainer">
-            <h1>Provinces</h1>
+            <h1>Color</h1>
             <div class="defaultTable">
                 <table>
                     <thead>
-                        <th>Province ID</th>
-                        <th>Province</th>
+                        <th>Color ID</th>
+                        <th>Color</th>
                     </thead>
                     <tbody>
-                        <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="8">
-                            <td>1</td>
-                            <td>Ontario</td>
-                        </tr>
                         <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="9">
-                            <td>2</td>
-                            <td>Quebec</td>
+                            <td>01</td>
+                            <td>Yellow</td>
                         </tr>
                         <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="10">
-                            <td>3</td>
-                            <td>Nova Scotia</td>
+                            <td>02</td>
+                            <td>Blue</td>
                         </tr>
                         <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="11">
-                            <td>4</td>
-                            <td>New Brunswick</td>
+                            <td>03</td>
+                            <td>Red</td>
                         </tr>
                         <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="12">
-                            <td>5</td>
-                            <td>Manitoba</td>
-                        </tr>
-                        <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="13">
-                            <td>6</td>
-                            <td>British Columbia</td>
-                        </tr>
-                        <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="14">
-                            <td>7</td>
-                            <td>Prince Edward Island</td>
-                        </tr>
-                        <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="15">
-                            <td>8</td>
-                            <td>Saskatchewan</td>
+                            <td>04</td>
+                            <td>Purple</td>
                         </tr>
                     </tbody>
                 </table>
@@ -94,15 +78,20 @@
 <!--Chose to keep these as cityContainer[X] since I'd rather not mess with the style sheet, and nothing new seems needed yet.-->
             <div class="defaultControls cityContainerControls">
                 <div class="cityContainerCreate">
-                    <a id="defaultEditButton" href="provinceEdit.html" tabindex="16">Edit Province</a>
+                    <a tabindex="13" href="ColorEdit.html" id="defaultEditButton">Edit Color</a>
                 </div>
                 <div class="cityContainerDelete">
-                    <a href="provinceCreate.html" tabindex="17">New Province</a>
+                    <a tabindex="14" href="ColorCreate.html">New Color</a>
                 </div>
             </div>
         </div>
     </main>
-
+ <!-- Footer -->
+ <div id="footer">
+    <footer>
+        <p>This page was made by Amron Weeber</p>
+    </footer>
+</div>
 
 </body>
 </html>
