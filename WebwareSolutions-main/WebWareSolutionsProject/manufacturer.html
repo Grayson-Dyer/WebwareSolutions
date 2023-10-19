@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturers</title>
+    <!-- link to your CSS file here -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!--  link to additional stylesheets or libraries here -->
+    <!-- link to your JavaScript file here -->
+    <script src="assets/js/tableSelectScript.js"></script>
+    <!-- include additional JavaScript libraries here -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"><img src="images/logo.webp" alt="Company Logo" tabindex="1"></a>
+                </li>
+                <li class="navbar-item-1">
+                    <a tabindex="2" href="index.html">Customer, Equipment</a>
+                </li>
+                <li class="navbar-item-2">
+                    <a href="province.html" tabindex="3">Province</a>
+                </li>
+                <li class="navbar-item-3">
+                    <a href="country.html" tabindex="4">Country</a>
+                </li>
+                <li class="navbar-item-4">
+                    <a href="city.html" tabindex="5">City</a>
+                </li>
+                <li class="navbar-item-5">
+                    <a href="manufacturer.html" tabindex="6">Manufacturer</a>
+                </li>
+                <li>
+                    <a href="color.html" tabindex="7">Colour</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!-- Page Content -->
+    <main>
+    
+        <!-- webpage content goes here -->
+        <div class="defaultContainer">
+            <h1>Manufacturers</h1>
+            <div class="defaultTable">
+                <table>
+                    <thead>
+                        <th>Manufacturer ID</th>
+                        <th>Manufacturer</th>
+                    </thead>
+                    <tbody>
+                        <tr onclick="handleRowClick(this)"  onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="9">
+                            <td>01</td>
+                            <td>Ryobi </td>
+                        </tr>
+                        <tr   onclick="handleRowClick(this)"  onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="10">
+                            <td>02</td>
+                            <td>Honda </td>
+                        </tr>
+                        <tr   onclick="handleRowClick(this)"  onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="11">
+                            <td>03</td>
+                            <td>Toro</td>
+                        </tr>
+                        <tr onclick="handleRowClick(this)"  onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="12">
+                            <td>04 </td>
+                            <td>Husqvarna</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+<!--Chose to keep these as cityContainer[X] since I'd rather not mess with the style sheet, and nothing new seems needed yet.-->
+            <div class="defaultControls cityContainerControls">
+                <div class="cityContainerEdit">
+                    <a id="defaultEditButton" tabindex="13" href="manufacturerEdit.html">Edit manufacturer</a>
+                </div>
+                <div class="cityContainerCreate">
+                    <a href="manufacturerCreate.html" tabindex="14">New manufacturer</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer">
+        <footer>
+            <p>This page was made by Amron Weeber</p>
+        </footer>
+    </div>
+</body>
+</html>

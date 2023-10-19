@@ -1,0 +1,371 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #e5e7eb;
+}
+
+.navbar {
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 10px 60px;
+    padding: 10px 0px;
+    width: auto;
+}
+
+.navbar li {
+    list-style: none;
+    display: inline;
+    text-align: center;
+}
+.navbar img {
+    margin: 5px;
+}
+.navbar a {
+    padding: 10px 50px;
+    font-size: 20px;
+    background: #1e91d6;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #e5e7eb;
+    margin: 5px;
+}
+
+.navbar a:hover {
+    background-color: #2061d3;
+    cursor: pointer;
+}
+
+
+
+/* DEFAULT STYLIZING */
+
+
+.defaultContainer {
+    background-color: #fff;
+    border-radius: 10px;
+    border: #1e91d6 solid 3px;
+    padding: 10px;
+    width: 70%;
+    margin: 40px auto;
+}
+
+.defaultContainer h1 {
+    text-align: center;
+    color: #2061d3;
+}
+
+.defaultControls a {
+	text-align: center;
+    display: block;
+    font-size: 18px;
+    background-color: #1e91d6;
+    text-decoration: none;
+    color: #e5e7eb;			
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.defaultControls a:hover {
+    background-color: #2061d3;
+    cursor: pointer;
+}
+
+.defaultTable table {
+    width: 95%;
+    margin: 0 auto;
+    background-color: #e5e7eb;
+    border-radius: 10px;
+    border-collapse: collapse;
+    text-align: left;
+    table-layout: fixed;
+    max-height: 650px;
+}
+
+.defaultTable th {
+    padding: 14px;
+    font-size: 22px;
+}
+
+.defaultTable td {
+    padding: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-wrap: nowrap;
+    font-size: 18px;
+}
+
+.defaultTable tr:hover td {
+    background-color: #1e91d6;
+    cursor: pointer;
+}
+
+.defaultTable tr.selected td {
+    background-color: #1e91d6;
+    cursor: pointer;
+}
+
+#defaultEditButton {
+    display: none;
+}
+
+/* DEFAULT FORM STYLIZING */
+
+.formBackButton input {
+    display: inline-block;
+    color: #e5e7eb;
+    border-style: none;
+    background-color: #1e91d6;
+    width: 350px;
+    margin-top: 10px;
+    margin-left: 70px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.formBackButton input:hover {
+    background-color: #2061d3;
+    cursor: pointer;
+}
+
+.formContainer {
+    margin: 3% auto 0 auto;
+    width: 50%;
+}
+
+.formContainer label, .formContainer h1 {
+    color: #2061d3;
+    text-align: center;
+}
+
+
+.formContainer h1 {
+    display: block;
+    margin: 3px auto 20px auto;
+    border-bottom: 3px solid #2061d3;
+}
+
+.formContainer label {
+    margin: 0 auto;
+    display: inline-block;
+    padding: 8px;
+    font-size: 20px;
+    width: 150px;
+    text-align: left;
+}
+
+.formContainer input, .formContainer select {
+    display: inline;
+    border-style: none;
+    border-bottom: 1px solid #2061d3;
+    margin: 0 auto;
+    padding: 8px;
+    background-color: #e5e7eb;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.formContainer input {
+    width: calc(100% - 250px);
+}
+
+.formContainer select {
+    width: calc(100% - 270px);
+}
+
+
+.formContainer input::placeholder {
+    color: rgba(100, 100, 100, 0.3);
+}
+
+.formContainerControls {
+    display: grid;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "formContainerSubmit formContainerClear";
+}
+
+.formContainerControls input{
+    border-style: none;
+    text-align: center;
+    display: block;
+    font-size: 18px;
+    background: #1e91d6;
+    color: #e5e7eb;			
+    margin: 10px auto;
+    width: 90%;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+
+.formContainerControls input:hover {
+    background-color: #2061d3;
+    cursor: pointer;
+}
+
+
+.formNewDataElement  {
+    display: inline;
+}
+
+.formNewDataElement input{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 40px;
+    border-style: none;
+}
+
+
+.formNewDataElement a {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    width: 0%;
+    border-style: none;
+    text-decoration: none;
+}
+
+.formNewDataElement input:hover {
+    background-color: #2061d3;
+    cursor: pointer;
+}
+
+
+#formClear {
+    background-color: #e13f29;
+    color: #e5e7eb;
+}
+
+#formClear:hover {
+    background-color: #fa270b;
+    cursor: pointer;
+}
+
+
+/* City Page */
+
+.cityContainerControls {
+    display: grid;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "cityContainerCreate cityContrainerEdit";
+}
+
+.cityContainerControls a {
+    padding: 10px 50px;
+    border-radius: 10px;
+    width: 60%;
+}
+
+
+/* Customer - Invetory Page */
+
+.customerInventoryTableSplit table {
+    text-align: center;
+}
+
+.NewOrderOptions {
+    margin: 40px auto;
+    width: 75%;
+}
+
+.customerInventoryTableSplit {
+    display: grid;
+    border-radius: 20px;
+    padding: 15px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.NewOrderOptions a {
+    padding: 10px; 
+    width: 90%;
+    border-radius: 20px;
+}
+
+.customerInventoryTableSplit {
+    grid-template-areas: 
+    "customerInvetoryTableSplit-Cust customerEquipmentTableSplit-Inv";
+    width: 75%;
+    margin: 50px auto;
+}
+
+.customerInventoryTableSplit h2 {
+    text-align: center;
+    color: #2061d3;
+    font-size: 36px;
+}
+
+.customerInvetoryTableSplit-Cust, .customerEquipmentTableSplit-Inv {
+    display: block;
+    background-color: #fff;
+    border-style: solid;
+    border-color: #1e91d6;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+
+
+
+.customerInventoryContainerControls,.customerContainerControls {
+    display: grid;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.customerContainerControls {
+    grid-template-areas: 
+    "customerContainerEdit customerContainerCreate";
+}
+
+.customerInventoryContainerControls {
+    grid-template-areas: 
+    "customerInventoryContainerEdit customerInventoryContainerCreate";
+}
+
+.customerInvetoryTableSplit-Cust #create-button {
+    border-style: none;
+    font-size: 18px;
+    background: #1e91d6;
+    color: #e5e7eb;			
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#Equipment-create-button , #Equipment-edit-button, .customerInvetoryTableSplit-Cust #edit-button {
+    border-style: none;
+    display: none;
+    font-size: 18px;
+    background: #1e91d6;
+    color: #e5e7eb;			
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#Equipment-create-button:hover , #Equipment-edit-button:hover, .customerInvetoryTableSplit-Cust #edit-button:hover,.customerInvetoryTableSplit-Cust #create-button:hover {
+    background-color: #2061d3;
+}
+
+#footer {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
