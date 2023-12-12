@@ -50,41 +50,43 @@ function populateEquipmentTable(customerId) {
 
     if (customerId == "1") {
         EquipmentItems = [
-            { name: "Lawnmaster22", serial: "GA251", purchaseDate: "2022-07-16" },
-            { name: "Bushmaster23", serial: "HJS66", purchaseDate: "2023-06-23" },
-            { name: "Weedmaster02", serial: "GSD42", purchaseDate: "2002-08-18" },
+            { id: 1, name: "Throttle/Speed Control"   },
+            { id: 2, name: "Blade"  },
+            { id: 3, name: "Deck"   },
         ]
     }   else if (customerId == "2") {
         EquipmentItems = [
-            { name: "Yardbeast", serial: "IUV32", purchaseDate: "1999-07-29" },
-            { name: "Bushmaster21", serial: "HJS64", purchaseDate: "2021-02-20" },
+            { id: 5, name: "Wheels"  },
+            { id: 6, name: "Handle"   },
         ]
     } else if (customerId == "3") {
         EquipmentItems = [
-            { name: "YardWorker", serial: "YWCC3", purchaseDate: "2008-06-18" },
-            { name: "YardWacker", serial: "YWC22", purchaseDate: "2008-06-18" },
-            { name: "YardrRelaxer", serial: "YRC22", purchaseDate: "2008-06-18" },
+            { id: 10, name: "Drive System"   },
+            { id: 13, name: "Grass Catcher/Bag"   },
+            { id: 14, name: "Mulching Kit"   },
         ]
     }else if (customerId == "4") {
         EquipmentItems = [
-            { name: "YardWorker", serial: "YWCC3", purchaseDate: "2008-06-18" },
-            { name: "YardWacker", serial: "YWC22", purchaseDate: "2008-06-18" },
-            { name: "YardrRelaxer", serial: "YRC22", purchaseDate: "2008-06-18" },
+            { id: 11, name: "Spark Plug"   },
+            { id: 12, name: "Air Filter"   },
+            { id: 9, name: "Ignition Switch"   },
         ]
     }
 
     // Clear existing rows in the Equipment table
     EquipmentTableBody.innerHTML = "";
 
-    let tabIndex = 21;
+    let tabIndex = 14;
     // Populate the Equipment table with the sample data
     EquipmentItems.forEach(item => {
         const row = EquipmentTableBody.insertRow();
-        const nameCell = row.insertCell(0);
-        const serialCell = row.insertCell(1);
-        const purchaseDateCell = row.insertCell(2);
+        const idCell = row.insertCell(0);
+        const nameCell = row.insertCell(1);
+        const serialCell = row.insertCell(2);
+        const purchaseDateCell = row.insertCell(3);
         
 
+        idCell.textContent = item.id;
         nameCell.textContent = item.name;
         serialCell.textContent = item.serial;
         purchaseDateCell.textContent = item.purchaseDate;

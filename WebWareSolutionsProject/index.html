@@ -6,7 +6,6 @@
     <title>Small Engines Company</title>
     <!-- link to your CSS file here -->
     <link rel="stylesheet" href="assets/css/style.css">
-
     <!--  link to additional stylesheets or libraries here -->
 
     <!-- link to your JavaScript file here -->
@@ -14,31 +13,20 @@
     <!-- include additional JavaScript libraries here -->
 </head>
 <body>
+    <!-- Login Form -->
+    <form id="login-form" class="form-container">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+    </form>
+
     <!-- Navigation Bar -->
-    <div class="navbar">
+    <div class="navbar" id="navbar">
         <nav>
             <ul>
-                <li>
-                    <a href="index.html"><img src="images/logo.webp" alt="Company Logo" tabindex="1"></a>
-                </li>
-                <li class="navbar-item-1">
-                    <a tabindex="2" href="index.html">Customer, Equipment</a>
-                </li>
-                <li class="navbar-item-2">
-                    <a href="province.html" tabindex="3">Province</a>
-                </li>
-                <li class="navbar-item-3">
-                    <a href="country.html" tabindex="4">Country</a>
-                </li>
-                <li class="navbar-item-4">
-                    <a href="city.html" tabindex="5">City</a>
-                </li>
-                <li class="navbar-item-5">
-                    <a href="manufacturer.html" tabindex="6">Manufacturer</a>
-                </li>
-                <li>
-                    <a href="color.html" tabindex="7">Colour</a>
-                </li>
+                <!-- Navbar items will be dynamically generated here -->
             </ul>
         </nav>
     </div>
@@ -46,83 +34,214 @@
     <!-- Page Content -->
     <main>
         <!-- webpage content goes here -->
-
-        <section>
+        <!-- <section>
             <div class="customerInventoryTableSplit defaultTable defaultControls">
                 <div class="customerInvetoryTableSplit-Cust">
                     <h2>Customer</h2>
+                    <div class="customerInventoryFilter">
+                        <form>
+                            <h3>Filtering</h3>
+                            <div>
+                                <label for="Name">Name:</label>
+                                <input type="text" id="Name" tabindex="9" name="Name" placeholder="John Doe">
+                                <label for="PhoneNumber">Phone Number:</label>
+                                <input type="text" id="PhoneNumber" tabindex="10" name="PhoneNumber" placeholder="0123456789">
+                                <label for="Address">Email:</label>
+                                <input type="text" id="Address" name="Address" tabindex="11" placeholder="FirstLast@email.com">
+                            </div>
+                        </form>
+                    </div>
+
                     <table >
                         <thead>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Number</th>
-                            <th>Address</th>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Number</th>
+                                <th>Email</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr data-customer-id="1" tabindex="8"  onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" onclick="handleRowClick(this)">
+                            <tr data-customer-id="1" tabindex="12"  onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" onclick="handleRowClick(this)">
                                 <td>John</td>
                                 <td>Doe</td>
                                 <td>123-456-7890</td>
-                                <td>123 Main St, City</td>
+                                <td>JohnDoe@email.com</td>
                             </tr>
-                            <tr  data-customer-id="2" tabindex="9" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" onclick="handleRowClick(this)">
+                            <tr  data-customer-id="2" tabindex="13" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" onclick="handleRowClick(this)">
                                 <td>Jane</td>
                                 <td>Smith</td>
                                 <td>987-654-3210</td>
-                                <td>456 Elm St, Town</td>
+                                <td>JaneSmith@email.com</td>
                             </tr>
-                            <tr  data-customer-id="3" tabindex="10" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" onclick="handleRowClick(this)">
+                            <tr  data-customer-id="3" tabindex="14" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" onclick="handleRowClick(this)">
                                 <td>Alice</td>
                                 <td>Johnson</td>
                                 <td>555-555-5555</td>
-                                <td>789 Oak St, Village</td>
+                                <td>AliceJohnson@email.com</td>
                             </tr>
-                            <tr data-customer-id="4" tabindex="11"  onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" onclick="handleRowClick(this)">
+                            <tr data-customer-id="4" tabindex="15"  onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" onclick="handleRowClick(this)">
                                 <td>Alvin</td>
                                 <td>Johnson</td>
                                 <td>324-555-5555</td>
-                                <td>849 Spruce St, Hamlet</td>
+                                <td>AlvinJohnson@email.com</td>
                             </tr>
                         </tbody>
                     </table>
                     <div class="customerContainerControls defaultControls">
                         <div class="customerContainerEdit"> 
-                            <a href="customerEdit.html" id="edit-button" tabindex="12"  onkeydown="if (event.keyCode == 13) {goToEditPage()}" onclick="goToEditPage()">Edit</a>
+                            <a href="customerEdit.html" id="edit-button" tabindex="16"  onkeydown="if (event.keyCode == 13) {goToEditPage()}" onclick="goToEditPage()">Edit</a>
                         </div>
                         <div class="customerContainerCreate">
-                            <a href="customerCreate.html" id="create-button" tabindex="13">Create</a>
+                            <a href="customerCreate.html" id="create-button" tabindex="17">Add</a>
                         </div>
                     </div>
                 </div>
                 <div class="customerEquipmentTableSplit-Inv">
                     <h2>Equipment</h2>
+                    <div class="customerInventoryFilter">
+                        <form>
+                            <h3>Filtering</h3>
+                            <div>
+                                <label for="EquipName">Name:</label>
+                                <input type="text" tabindex="18" id="EquipName" name="EquipName" placeholder="LawnMower">
+                                <label for="SerialNumber">Serial Number:</label>
+                                <input type="text" id="SerialNumber" tabindex="19" name="SerialNumber" placeholder="0123456789">
+                                <label for="PurchaseDate">Purchase Date:</label>
+                                <input type="date" id="PurchaseDate" tabindex="20" name="PurchaseDate" placeholder="123 Baker Street">
+                            </div>
+                        </form>
+                    </div>
                     <table>
                         <thead>
                             <tr>
-                                <th>ID</th>
                                 <th>Name</th>
                                 <th>Serial Number</th>
                                 <th>Purchase Date</th>
                             </tr>
                         </thead>
                         <tbody id="EquipmentTableBody">
-                            <!-- Equipment table rows will be dynamically populated here -->
+                           
                         </tbody>
                     </table>
                     <div class="customerInventoryContainerControls defaultControls">
                         <div class="customerInventoryContainerEdit"> 
-                            <a href="equipmentEdit.html" id="Equipment-edit-button" tabindex="17" onkeydown="if (event.keyCode == 13) {goToEquipmentCreatePage()}" onclick="goToEquipmentEditPage()">Edit</a>
+                            <a href="equipmentEdit.html" id="Equipment-edit-button" tabindex="26" onkeydown="if (event.keyCode == 13) {goToEquipmentCreatePage()}" onclick="goToEquipmentEditPage()">Edit</a>
                         </div>
                         <div class="customerInventoryContainerCreate">
-                            <a href="equipmentCreate.html" id="Equipment-create-button" tabindex="18"  onkeydown="if (event.keyCode == 13) {goToEquipmentCreatePage()}" onclick="goToEquipmentCreatePage()">Create</a>
+                            <a href="equipmentCreate.html" id="Equipment-create-button" tabindex="27"  onkeydown="if (event.keyCode == 13) {goToEquipmentCreatePage()}" onclick="goToEquipmentCreatePage()">Add</a>
                         </div>
                     </div>
 
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
 
+    <script>
+        // Define the list of users and their roles
+        const users = [
+            { username: "admin", password: "admin", role: "admin" },
+            { username: "salesrep", password: "salesrep", role: "salesrep" },
+            { username: "technician", password: "technician", role: "technician" }
+        ];
+
+        // Function to generate the navbar items based on the user's role
+        function generateNavbar(role) {
+                const navbar = document.getElementById("navbar");
+                const navbarItems = document.createElement("ul");
+
+                if (role === "admin") {
+                    navbarItems.innerHTML = `
+                        <li>
+                            <a href="repairsAndInventory.html" tabindex="2">Repair, Inventory</a>
+                        </li>
+                        <li class="navbar-item-1">
+                            <a tabindex="3" href="equipment.html">Customer, Equipment</a>
+                        </li>
+                        <li class="navbar-item-2">
+                            <a href="province.html" tabindex="4">Province</a>
+                        </li>
+                        <li class="navbar-item-3">
+                            <a href="country.html" tabindex="5">Country</a>
+                        </li>
+                        <li class="navbar-item-4">
+                            <a href="city.html" tabindex="6">City</a>
+                        </li>
+                        <li class="navbar-item-5">
+                            <a href="manufacturer.html" tabindex="7">Manufacturer</a>
+                        </li>
+                        <li>
+                            <a href="color.html" tabindex="8">Colour</a>
+                        </li>
+                        <li>
+                            <button onclick="logout()">Logout</button>
+                        </li>
+                    `;
+                } else if (role === "salesrep") {
+                    navbarItems.innerHTML = `
+                        <li class="navbar-item-1">
+                            <a tabindex="3" href="equipment.html">Customer, Equipment</a>
+                        </li>
+                        <li>
+                            <button onclick="logout()">Logout</button>
+                        </li>
+                    `;
+                } else if (role === "technician") {
+                    navbarItems.innerHTML = `
+                        <li>
+                            <a href="repairsAndInventory.html" tabindex="2">Repair, Inventory</a>
+                        </li>
+                        <li>
+                            <button onclick="logout()">Logout</button>
+                        </li>
+                    `;
+                }
+
+                navbar.appendChild(navbarItems);
+            }
+
+        // Event listener for login form submission
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Find the user in the list of users
+            const user = users.find(u => u.username === username && u.password === password);
+
+            if (user) {
+                // Store the user's role in local storage
+                localStorage.setItem("userRole", user.role);
+
+                // Generate the navbar based on the user's role
+                generateNavbar(user.role);
+
+                // Hide the login form
+                document.getElementById("login-form").style.display = "none";
+            } else {
+                alert("Invalid username or password");
+            }
+        });
+
+        // Check if a user is already logged in and generate the navbar if so
+        const userRole = localStorage.getItem("userRole");
+        if (userRole) {
+            generateNavbar(userRole);
+            document.getElementById("login-form").style.display = "none";
+        }
+        function logout() {
+            // Clear the user's role from local storage
+            localStorage.removeItem("userRole");
+
+            // Refresh the page
+            location.reload();
+        }
+    </script>
+
+
+    
     <!-- Footer -->
     <div id="footer">
         <footer>
