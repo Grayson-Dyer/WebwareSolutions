@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inventoryCreate</title>
+    <!-- link to your CSS file here -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!--  link to additional stylesheets or libraries here -->
+
+    <!-- link to your JavaScript file here -->
+    <script src="assets/js/inventoryValidation.js"></script>
+    <script src="assets/js/loginForm.js"></script>
+    <!-- include additional JavaScript libraries here -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar">
+        <nav>
+            <ul>
+                <!-- Navbar items will be dynamically generated here -->
+            </ul>
+        </nav>
+    </div>
+
+    
+    <main>
+        <div  class="formBackButton"><input tabindex="10" onclick="history.back()" onkeydown="if (event.keyCode == 13) {history.back()}" value="Back" type="button"></div>
+        <div class="formContainer defaultContainer defaultControls">
+            <h1>Inventory Create Form</h1>
+            <form action="index.html" method="get" onreset="return customClear();">
+                <label for="name">*Inventory Item:</label>
+                <input type="text" id="name" name="name" placeholder="Item to be added to Inventory" tabindex="11" required><br><br>
+    
+                <label for="description">Description:</label>
+                <textarea type="text" id="description" name="description" class="LongText"  placeholder="Any additional information" tabindex="12" required></textarea><br><br>
+    
+    
+                <div class="defaultControls formContainerControls">
+                    <div class="formContainerSubmit">
+                        <input id="repairs-create-button" type="submit" value="submit" onclick="return validateForm();" tabindex="13" onkeydown="if (event.keyCode == 13) {return validateForm();}">
+                    </div>
+                    <div class="formContainerClear">
+                        <input value="clear" href="inventoryCreate.html" type="reset" tabindex="12" id="formClear">
+                    </div>
+                </div> 
+            </form>    
+        </div>
+    </main>
+</body>

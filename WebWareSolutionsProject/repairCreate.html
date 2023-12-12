@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repair Create</title>
+    <!-- link to your CSS file here -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!--  link to additional stylesheets or libraries here -->
+
+    <!-- link to your JavaScript file here -->
+    <script src="assets/js/customerCreateScript.js" async></script>
+    <script src="assets/js/repairValidation.js"></script>  
+    <script src="assets/js/loginForm.js"></script>
+    <!-- include additional JavaScript libraries here -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar">
+        <nav>
+            <ul>
+                <!-- Navbar items will be dynamically generated here -->
+            </ul>
+        </nav>
+    </div>
+
+
+    <main>
+        <div  class="formBackButton"><input tabindex="9" onclick="history.back()" onkeydown="if (event.keyCode == 13) {history.back()}" value="Back" type="button"></div> 
+        <div class="formContainer defaultContainer defaultControls">
+            <h1>Log Repair</h1>
+            <form action="repairsAndInventory.html" method="get" onreset="return customClear();">
+                <label for="FullName">*Customer Name:</label>
+                <input type="text" id="FullName" name="FullName" value="John Johnson" placeholder="Full Name" tabindex="10" required><br><br>
+    
+                <label for="Warranty">*Warranty:</label>
+                <input type="text" id="Warranty" name="Warranty" value="yes" placeholder="yes/no" tabindex="11" required><br><br>
+                
+                <label for="warrantyInfo">Warranty Claim Information:</label>
+                <textarea id="warrantyInfo" class="LongText" value="He spilt a coffre on it lol"  name="warrantyInfo" placeholder="specifics for claims "  tabindex="12"></textarea><br><br>
+    
+                <label for="RepairDate">*Repair Start Date:</label>
+                <input type="date" id="RepairDate" name="RepairDate" value="2012-09-15" tabindex="13" required><br><br>
+
+                
+
+                
+                <div class="defaultControls formContainerControls">
+                    <div class="formContainerSubmit">
+                        <input id="repairs-create-button" type="submit" tabindex="14" value="submit" onclick="return validateForm();" onkeydown="if (event.keyCode == 13) {return validateForm();}">
+                    </div>
+                    <div class="formContainerClear">
+                        <input value="clear" type="reset" id="formClear" tabindex="15">
+                    </div>
+                </div>  
+            </form>
+            
+            
+        </div>
+        
+    </main>
+</body>

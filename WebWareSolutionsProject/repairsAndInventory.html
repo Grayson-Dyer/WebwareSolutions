@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repairsAndInventory</title>
+    <!-- link to your CSS file here -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--  link to additional stylesheets or libraries here -->
+
+    <!-- link to your JavaScript file here -->
+    <script src="assets/js/tableSelectScript.js"></script>
+    <script src="assets/js/loginForm.js"></script>
+    <!-- include additional JavaScript libraries here -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar">
+        <nav>
+            <ul>
+                <!-- Navbar items will be dynamically generated here -->
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page Content -->
+    <main>
+        <!-- webpage content goes here -->
+
+        <section>
+            <div class="defaultContainer">
+                <h1>Current Repairs</h1>
+                <div class="defaultTable">
+                    <table >
+                        <thead>
+                            <tr>
+                                <th>Customer Name</th>
+                                <th>Phone Number</th>
+                                <th>Warranty</th>
+                                <th>Repair Start Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr  tabindex="9" onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}">
+                                <td>John Doe</td>
+                                <td>392-342-2334</td>
+                                <td>Yes</td>
+                                <td>2023-10-10</td>
+                            </tr>
+                            <tr  tabindex="10" onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}">
+                                <td>Jane Smith</td>
+                                <td>203-321-5386</td>
+                                <td>No</td>
+                                <td>2023-10-11</td>
+                            </tr>
+                            <tr tabindex="11" onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}">
+                                <td>Alice Johnson</td>
+                                <td>685-416-8321</td>
+                                <td>Yes</td>
+                                <td>2023-10-20</td>
+                            </tr>
+                            <tr tabindex="12" onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}">
+                                <td>Alvin Johnson</td>
+                                <td>895-463-6531</td>
+                                <td>Yes</td>
+                                <td>2023-10-22</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="defaultControls repairContainerControls">
+                        <div class="cityContainerCreate repairButtons"> 
+                            <a href="repairEdit.html" id="defaultEditButton" tabindex="13"  onkeydown="if (event.keyCode == 13) {goToEditPage()}" onclick="goToEditPage()">Edit</a>
+                        </div>
+                        <div class="RepairContainerFinish repairButtons"> 
+                            <a href="repairStepOne.html" id="" tabindex="14"  onkeydown="if (event.keyCode == 13) {goToEditPage()}" onclick="goToEditPage()">Finish</a>
+                        </div>
+                        <div class="cityContrainerEdit repairButtons">
+                            <a href="repairCreate.html" id="create-button" tabindex="15">Create</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

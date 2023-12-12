@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Provinces</title>
+    <!-- link to your CSS file here -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!--  link to additional stylesheets or libraries here -->
+    <!-- link to your JavaScript file here -->
+    <script src="assets/js/tableSelectRepairStepOne.js"></script>
+    <script src="assets/js/loginForm.js"></script>
+    <!-- include additional JavaScript libraries here -->
+  </head>
+  <body>
+    <main>
+      <div class="stepPageGrid">
+        <div class="stepPageHelp defaultContainer">
+          <h1>Step 1</h1>
+          <h2>of 2</h2>
+          <h3>Help</h3>
+          <p>
+            In step one you must add the date of when you finished the repair in
+            the "End Date" box, then selected the parts that you used to fix the
+            piece of equipment (ex. Lawnmower, WeedWhacker) to the order by
+            clicking the items in the "Parts Used" Table. When that is complete
+            click Submit.
+          </p>
+        </div>
+        <div class="stepPageContent defaultContainer">
+          <h1>Finishing Repair</h1>
+          <div class="reportPartsDivide">
+            <div class="reportPartsDivide-Report formContainer">
+              <h3>Repair Order</h3>
+              <form method="get" action="repairStepTwo.html">
+                <div class="repairFormGrid">
+                  <div class="repairFormLabelOne">
+                    <label for="customerName">Customer Name:</label>
+                  </div>
+                  <div class="repairFormInputOne">
+                    <p id="customerName">Jason Mamoa</p>
+                  </div>
+                  <div class="repairFormLabelTwo">
+                    <label for="equipmentName">Equipment:</label>
+                  </div>
+                  <div class="repairFormInputTwo">
+                    <p id="equipmentName">WeedWhacker 321</p>
+                  </div>
+                  <div class="repairFormLabelThree">
+                    <label for="startDate">Start Date:</label>
+                  </div>
+                  <div class="repairFormInputThree">
+                    <p id="startDate">2021-10-13</p>
+                  </div>
+                  <div class="repairFormLabelFour">
+                    <label for="repairDate">End Date:</label>
+                  </div>
+                  <div class="repairFormInputFour">
+                    <input type="date" id="repairDate" required />
+                  </div>
+                </div>
+                <div class="repairFormControls">
+                  <div class="repairFormSubmit">
+                    <input
+                      type="submit"
+                      onclick="return validateForm()"
+                      onkeydown="if (event.keyCode == 13) { return validateForm();}"
+                      value="Submit"
+                    />
+                  </div>
+                  <div class="repairFormClear">
+                    <input
+                      type="reset"
+                      onclick="clearForm()"
+                      onkeydown="if (event.keyCode == 13) {clearForm();}"
+                      value="Clear"
+                    />
+                  </div>
+                </div>
+              </form>
+
+              <div class="repairFormError">
+                <h4 id="errorOutput">dummyData</h4>
+              </div>
+            </div>
+
+            <div class="reportPartsDivide-Parts defaultTable">
+              <h3>Parts Used</h3>
+              <table>
+                <thead>
+                  <tr
+                    onclick="handleRowClick(this)"
+                    onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
+                  >
+                    <th>Name</th>
+                    <th>Colour</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    onclick="handleRowClick(this)"
+                    onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
+                  >
+                    <td>Piston</td>
+                    <td>Silver</td>
+                  </tr>
+                  <tr
+                    onclick="handleRowClick(this)"
+                    onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
+                  >
+                    <td>Spark Plug</td>
+                    <td>Black</td>
+                  </tr>
+                  <tr
+                    onclick="handleRowClick(this)"
+                    onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
+                  >
+                    <td>Carburetor</td>
+                    <td>Gold</td>
+                  </tr>
+                  <tr
+                    onclick="handleRowClick(this)"
+                    onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
+                  >
+                    <td>Camshaft</td>
+                    <td>Steel</td>
+                  </tr>
+                  <tr
+                    onclick="handleRowClick(this)"
+                    onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
+                  >
+                    <td>Fuel Filter</td>
+                    <td>Blue</td>
+                  </tr>
+                  <tr
+                    onclick="handleRowClick(this)"
+                    onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
+                  >
+                    <td>Ignition Coil</td>
+                    <td>Red</td>
+                  </tr>
+                  <tr
+                    onclick="handleRowClick(this)"
+                    onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
+                  >
+                    <td>Exhaust Valve</td>
+                    <td>Green</td>
+                  </tr>
+                  <tr
+                    onclick="handleRowClick(this)"
+                    onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
+                  >
+                    <td>Oil Pump</td>
+                    <td>Yellow</td>
+                  </tr>
+                  <tr
+                    onclick="handleRowClick(this)"
+                    onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
+                  >
+                    <td>Throttle Body</td>
+                    <td>Orange</td>
+                  </tr>
+                  <tr
+                    onclick="handleRowClick(this)"
+                    onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
+                  >
+                    <td>Head Gasket</td>
+                    <td>Purple</td>
+                  </tr>
+                  <tr
+                    onclick="handleRowClick(this)"
+                    onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
+                  >
+                    <td>Timing Belt</td>
+                    <td>Brown</td>
+                  </tr>
+                  <tr
+                    onclick="handleRowClick(this)"
+                    onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
+                  >
+                    <td>Starter Motor</td>
+                    <td>Gray</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Engines Company</title>
+    <!-- link to your CSS file here -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--  link to additional stylesheets or libraries here -->
+
+    <!-- link to your JavaScript file here -->
+    <script src="assets/js/customerIndex.js"></script>
+    <script src="assets/js/loginForm.js"></script>
+    <!-- include additional JavaScript libraries here -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar">
+        <nav>
+            <ul>
+                <!-- Navbar items will be dynamically generated here -->
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page Content -->
+    <main>
+        <!-- webpage content goes here -->
+
+        <section>
+            <div class="customerInventoryTableSplit defaultTable defaultControls">
+                <div class="customerInvetoryTableSplit-Cust">
+                    <h2>Customer</h2>
+                    <div class="customerInventoryFilter">
+                        <form>
+                            <h3>Filtering</h3>
+                            <div>
+                                <label for="Name">Name:</label>
+                                <input type="text" id="Name" tabindex="9" name="Name" placeholder="John Doe">
+                                <label for="PhoneNumber">Phone Number:</label>
+                                <input type="text" id="PhoneNumber" tabindex="10" name="PhoneNumber" placeholder="0123456789">
+                                <label for="Address">Email:</label>
+                                <input type="text" id="Address" name="Address" tabindex="11" placeholder="FirstLast@email.com">
+                            </div>
+                        </form>
+                    </div>
+
+                    <table >
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Number</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-customer-id="1" tabindex="12"  onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" onclick="handleRowClick(this)">
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>123-456-7890</td>
+                                <td>JohnDoe@email.com</td>
+                            </tr>
+                            <tr  data-customer-id="2" tabindex="13" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" onclick="handleRowClick(this)">
+                                <td>Jane</td>
+                                <td>Smith</td>
+                                <td>987-654-3210</td>
+                                <td>JaneSmith@email.com</td>
+                            </tr>
+                            <tr  data-customer-id="3" tabindex="14" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" onclick="handleRowClick(this)">
+                                <td>Alice</td>
+                                <td>Johnson</td>
+                                <td>555-555-5555</td>
+                                <td>AliceJohnson@email.com</td>
+                            </tr>
+                            <tr data-customer-id="4" tabindex="15"  onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" onclick="handleRowClick(this)">
+                                <td>Alvin</td>
+                                <td>Johnson</td>
+                                <td>324-555-5555</td>
+                                <td>AlvinJohnson@email.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="customerContainerControls defaultControls">
+                        <div class="customerContainerEdit"> 
+                            <a href="customerEdit.html" id="edit-button" tabindex="16"  onkeydown="if (event.keyCode == 13) {goToEditPage()}" onclick="goToEditPage()">Edit</a>
+                        </div>
+                        <div class="customerContainerCreate">
+                            <a href="customerCreate.html" id="create-button" tabindex="17">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="customerEquipmentTableSplit-Inv">
+                    <h2>Equipment</h2>
+                    <div class="customerInventoryFilter">
+                        <form>
+                            <h3>Filtering</h3>
+                            <div>
+                                <label for="EquipName">Name:</label>
+                                <input type="text" tabindex="18" id="EquipName" name="EquipName" placeholder="LawnMower">
+                                <label for="SerialNumber">Serial Number:</label>
+                                <input type="text" id="SerialNumber" tabindex="19" name="SerialNumber" placeholder="0123456789">
+                                <label for="PurchaseDate">Purchase Date:</label>
+                                <input type="date" id="PurchaseDate" tabindex="20" name="PurchaseDate" placeholder="123 Baker Street">
+                            </div>
+                        </form>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Serial Number</th>
+                                <th>Purchase Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="EquipmentTableBody">
+                            <!-- Equipment table rows will be dynamically populated here -->
+                        </tbody>
+                    </table>
+                    <div class="customerInventoryContainerControls defaultControls">
+                        <div class="customerInventoryContainerEdit"> 
+                            <a href="equipmentEdit.html" id="Equipment-edit-button" tabindex="26" onkeydown="if (event.keyCode == 13) {goToEquipmentCreatePage()}" onclick="goToEquipmentEditPage()">Edit</a>
+                        </div>
+                        <div class="customerInventoryContainerCreate">
+                            <a href="equipmentCreate.html" id="Equipment-create-button" tabindex="27"  onkeydown="if (event.keyCode == 13) {goToEquipmentCreatePage()}" onclick="goToEquipmentCreatePage()">Add</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer">
+        <footer>
+            <p>This page was made by Grayson Dyer!</p>
+        </footer>
+    </div>
+
+</body>
+</html>

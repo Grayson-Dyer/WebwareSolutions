@@ -1,6 +1,6 @@
 
 function validateForm() {
-    const colorName = document.getElementById("colorName").value;
+    const colorName = document.getElementById("ColorName").value;
 
     if( !colorName ) {
         alert("Color name cannot be empty");
