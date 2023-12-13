@@ -14,4 +14,13 @@ function handleRowClick(row) {
         editButton.style.display = "none";
         selectedRow = null;
     }
+
+    const completeRepair = document.getElementById("completeRepair");
+    if(completeRepair != null) {
+        completeRepair.style.display = "block";
+        if(selectedRow == null) {
+            completeRepair.style.display = "none";
+        }
+        
+    }
 }

@@ -9,6 +9,7 @@
     <!--  link to additional stylesheets or libraries here -->
 
     <!-- link to your JavaScript file here -->
+    <script src="assets/js/repairTableCompleterRepair.js"></script>
     <script src="assets/js/tableSelectScript.js"></script>
     <script src="assets/js/loginForm.js"></script>
     <!-- include additional JavaScript libraries here -->
@@ -69,13 +70,10 @@
                     </table>
                     <div class="defaultControls repairContainerControls">
                         <div class="cityContainerCreate repairButtons"> 
-                            <a href="repairEdit.html" id="defaultEditButton" tabindex="13"  onkeydown="if (event.keyCode == 13) {goToEditPage()}" onclick="goToEditPage()">Edit</a>
+                            <a href="repairEdit.html" id="defaultEditButton" tabindex="13"  onkeydown="if (event.keyCode == 13) {goToEditPage()}" onclick="goToEditPage();">Edit</a>
                         </div>
                         <div class="RepairContainerFinish repairButtons"> 
-                            <a href="repairStepOne.html" id="" tabindex="14"  onkeydown="if (event.keyCode == 13) {goToEditPage()}" onclick="goToEditPage()">Finish</a>
-                        </div>
-                        <div class="cityContrainerEdit repairButtons">
-                            <a href="repairCreate.html" id="create-button" tabindex="15">Create</a>
+                            <input type="button" id="completeRepair" tabindex="14" value="Complete Repair"  onkeydown="if (event.keyCode == 13) {completeRepairPage()}" onclick="completeRepairPage()">
                         </div>
                     </div>
                 </div>

@@ -32,8 +32,11 @@
         <div class="formContainer defaultContainer">
             <h1>Create Colour</h1>
             <form action="color.html" method="get">
-                <label for="colorName">*Colour Name</label>
-                <input type="text" id="colorName" name="colorName" tabindex="9" required><br><br>
+                <label for="colorName">
+                    <font color="#FF2626">*</font>Color Name
+                </label>
+                <input type="text" id="colorName" name="colorName" tabindex="9">
+                <label id="colorVerify" class="errorLabel"></label><br>
                 <div class="defaultControls formContainerControls">
                     <div class="formContainerSubmit">
                         <input value="submit" type="submit" onclick="return validateForm();" onkeydown="if (event.keyCode == 13) {return validateForm();}" tabindex="10" id="formSubmit">
@@ -46,6 +49,5 @@
 
         </div>
     </main>
-
 </body>
 </html>

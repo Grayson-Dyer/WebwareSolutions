@@ -11,7 +11,6 @@
     <!--  link to additional stylesheets or libraries here -->
 
     <!-- link to your JavaScript file here -->
-    <script src="assets/js/customerCreateScript.js" async></script>
     <script src="assets/js/equipmentValidation.js"></script>
     <script src="assets/js/loginForm.js"></script>
     <!-- include additional JavaScript libraries here -->
@@ -31,27 +30,47 @@
         <div  class="formBackButton"><input tabindex="8" onclick="history.back()" onkeydown="if (event.keyCode == 13) {history.back()}" value="Back" type="button"></div>
         <div class="formContainer defaultContainer defaultControls">
             <h1>Customer Equipment Create Form</h1>
-            <form action="index.html" method="get" onreset="return customClear();">
-                <label for="name">*Name:</label>
-                <input type="text" id="name" name="name" placeholder="Lawnmower22" tabindex="9" required><br><br>
+            <form action="equipment.html" method="get" onreset="return customClear();">
+                <label for="name">
+                    <font color="#FF2626">*</font>Name:
+                </label>
+                <input type="text" id="name" name="name" placeholder="Lawnmower22" tabindex="9">
+                <label id="nameVerify" class="errorLabel"></label><br>
     
-                <label for="serial_number">*Serial Number:</label>
-                <input type="text" id="serial_number" name="serial_number"  placeholder="HDJ22" tabindex="10" required><br><br>
+                <label for="serial_number">
+                    <font color="#FF2626">*</font>Serial Number:
+                </label>
+                <input type="text" id="serial_number" name="serial_number"  placeholder="HDJ22" tabindex="10">
+                <label id="serialVerify" class="errorLabel"></label><br>
     
-                <label for="purchase_date">*Purchase Date:</label>
-                <input type="date" id="purchase_date" name="purchase_date" tabindex="11" required><br><br>
+                <label for="purchase_date">
+                    <font color="#FF2626">*</font>Purchase Date:
+                </label>
+                <input type="date" id="purchase_date" name="purchase_date" tabindex="11">
+                <label id="dateVerify" class="errorLabel"></label><br>
 
-                <label for="warranty">*Warranty:</label>
-                <input type="text" id="warranty" name="warranty" placeholder="3 Years" tabindex="12" required><br><br>
+                <label for="warranty">
+                    <font color="#FF2626">*</font>Warranty:
+                </label>
+                <input type="text" id="warranty" name="warranty" placeholder="3 Years" tabindex="12">
+                <label id="warrantyVerify" class="errorLabel"></label><br>
 
-                <label for="model">*Model:</label>
-                <input type="text" id="model" name="model" placeholder="Lawnmower" tabindex="13" required><br><br>
+                <label for="model">
+                    <font color="#FF2626">*</font>Model:
+                </label>
+                <input type="text" id="model" name="model" placeholder="Lawnmower" tabindex="13">
+                <label id="modelVerify" class="errorLabel"></label><br>
 
-                <label for="model_number">*Model Number:</label>
-                <input type="number" id="model_number" name="model_number" placeholder="22" tabindex="14" required><br><br>
+                <label for="model_number">
+                    <font color="#FF2626">*</font>Model Number:
+                </label>
+                <input type="number" id="model_number" name="model_number" placeholder="22" tabindex="14">
+                <label id="modelNumberVerify" class="errorLabel"></label><br>
                 
-                <label for="colour">*Colour:</label>
-                <select id="colour" name="colour" placeholder="none" tabindex="15" required>
+                <label for="colour">
+                    <font color="#FF2626">*</font>Colour:
+                </label>
+                <select id="colour" name="colour" placeholder="none" tabindex="15">
                     <option selected value="">none</option>
                     <option value="Red">Red</option>
                     <option value="Blue">Blue</option>
@@ -59,10 +78,13 @@
                 </select> 
                 <div class="formNewDataElement">
                     <a href="colorCreate.html" tabindex="16"><input type="button" tabindex="-1" value="+"></a>
-                </div><br><br>
+                </div>
+                <label id="colourVerify" class="errorLabel"></label><br>
 
-                <label for="manufacturer">*Manufacturer:</label>
-                <select  id="manufacturer" name="manufacturer" tabindex="17" placeholder="none" required>
+                <label for="manufacturer">
+                    <font color="#FF2626">*</font>Manufacturer:
+                </label>
+                <select  id="manufacturer" name="manufacturer" tabindex="17" placeholder="none">
                     <option selected value="">none</option>
                     <option value="Honda">Honda</option>
                     <option value="Porsche">Porsche</option>
@@ -71,7 +93,8 @@
                 </select>
                 <div class="formNewDataElement">
                     <a href="manufacturerCreate.html" tabindex="18"><input type="button" tabindex="-1" value="+"></a>
-                </div><br><br>
+                </div>
+                <label id="manufacturerVerify" class="errorLabel"></label><br>
     
                 <div class="defaultControls formContainerControls">
                     <div class="formContainerSubmit">

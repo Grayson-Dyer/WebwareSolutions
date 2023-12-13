@@ -1,13 +1,12 @@
-
-
 function validateForm() {
     const cityName = document.getElementById("cityName").value;
-
+    let cityVerify = document.getElementById("cityVerify");
 
     if (!cityName) {
-        alert("City name cannot be empty");
+        cityVerify.innerHTML = "The city name cannot be blank.";
         return false;
     }
 
+    cityVerify.innerHTML = "";
     return true;
 }

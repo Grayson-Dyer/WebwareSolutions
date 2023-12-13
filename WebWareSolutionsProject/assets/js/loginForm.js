@@ -11,41 +11,49 @@ window.onload = function() {
         if (userRole === "admin") {
             navbarItems.innerHTML = `
                 <li>
-                    <a href="repairsAndInventory.html" tabindex="2">Repair, Inventory</a>
+                    <a href="repairsAndInventory.html" tabindex="1">Active Repair</a>
                 </li>
                 <li class="navbar-item-1">
-                    <a tabindex="3" href="equipment.html">Customer, Equipment</a>
+                    <a tabindex="2" href="equipment.html">Customer & Equipment</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Maintenance</a>
+                    <a tabindex="3" href="#" class="dropbtn">Maintenance</a>
                     <div class="dropdown-content">
                         <a href="province.html">Province</a>
                         <a href="country.html">Country</a>
                         <a href="city.html">City</a>
                         <a href="manufacturer.html">Manufacturer</a>
                         <a href="color.html">Colour</a>
+                        <a href="CompletedRepairs.html">Completed Repairs</a>
+                        <a href="Report1Sales.html">Create Sales Report</a>
                     </div>
                 </li>
                 <li>
-                    <button onclick="logout()">Logout</button>
+                    <button tabindex="4" onclick="logout()">Logout</button>
                 </li>
             `;
         } else if (userRole === "salesrep") {
             navbarItems.innerHTML = `
                 <li class="navbar-item-1">
-                    <a tabindex="3" href="equipment.html">Customer, Equipment</a>
+                    <a tabindex="1" href="equipment.html">Customer & Equipment</a>
+                </li>
+                <li class="navbar-item-1">
+                    <a tabindex="2" href="CompletedRepairs.html">Completed Repairs</a>
                 </li>
                 <li>
-                    <button onclick="logout()">Logout</button>
+                    <button tabindex="3" onclick="logout()">Logout</button>
                 </li>
             `;
         } else if (userRole === "technician") {
             navbarItems.innerHTML = `
                 <li>
-                    <a href="repairsAndInventory.html" tabindex="2">Repair, Inventory</a>
+                    <a href="repairsAndInventory.html" tabindex="1">Active Repair</a>
                 </li>
                 <li>
-                    <button onclick="logout()">Logout</button>
+                <a href="CompletedRepairs.html" tabindex="2">Completed Repairs</a>
+                </li>
+                <li>
+                    <button tabindex="3" onclick="logout()">Logout</button>
                 </li>
             `;
         }

@@ -615,15 +615,32 @@ html, body {
     margin: 0px;
     padding: 0px;
     width: 100%;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
-    "cityContainerCreate RepairContainerFinish cityContrainerEdit";
+    "cityContainerCreate RepairContainerFinish";
 }
 
 
 .repairButtons  a {
     padding: 10px;
     margin: 10px 10px;
+}
+.repairButtons input[type=button] {
+    display: none;
+    width: 95%;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 10px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #1e91d6;
+    color: #f3f3f3;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.repairButtons input[type=button]:hover {
+    background-color: #2061d3;
+    cursor: pointer;
 }
 
 .reportPartsDivide {
@@ -670,9 +687,9 @@ html, body {
 
 .repairFormControls {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) auto;
     grid-template-areas: 
-    "repairFormSubmit repairFormClear";
+    "repairFormSubmit repairFormClear repairFormSave";
 }
 .repairFormControls input {
     display: block;
@@ -692,6 +709,15 @@ html, body {
 
 .repairFormSubmit input:hover {
     background-color: #2061d3;
+    cursor: pointer;
+}
+
+.repairFormSave input {
+    background-color: #e9d200;
+}
+
+.repairFormSave input:hover {
+    background-color: #8b8200;
     cursor: pointer;
 }
 
@@ -751,7 +777,18 @@ html, body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207cca', endColorstr='#9f58a3',GradientType=1 ); /* IE6-9 */
 }
 
+/* Error Validation */
 
+.errorLabel {
+    font-size: 18px !important;
+    color: #FF2626 !important;
+    text-align: left !important;
+    margin: 0px 0px 0px 165px !important;
+    padding: 0px !important;
+    width: auto !important;
+}
+
+/* Unique Rules */
 
 #Equipment-create-button , #Equipment-edit-button, .customerInvetoryTableSplit-Cust #edit-button {
     border-style: none;
@@ -764,6 +801,8 @@ html, body {
     border-radius: 10px;
     padding: 15px;
 }
+
+
 
 #Equipment-create-button:hover , #Equipment-edit-button:hover, .customerInvetoryTableSplit-Cust #edit-button:hover,.customerInvetoryTableSplit-Cust #create-button:hover {
     background-color: #2061d3;
