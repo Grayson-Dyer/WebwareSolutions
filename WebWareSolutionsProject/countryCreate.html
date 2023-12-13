@@ -31,8 +31,11 @@
         <div class="formContainer defaultContainer">
             <h1>Create Country</h1>
             <form action="country.html" method="get" >
-                <label for="countryName">*Country Name</label>
-                <input type="text" id="countryName" name="countryName" tabindex="9" required><br><br>
+                <label for="countryName">
+                    <font color="#FF2626">*</font>Country Name
+                </label>
+                <input type="text" id="countryName" name="countryName" tabindex="9">
+                <label id="countryVerify" class="errorLabel"></label><br>
                 <div class="defaultControls formContainerControls">
                     <div class="formContainerSubmit">
                         <input value="submit" type="submit" onclick="return validateForm();" onkeydown="if (event.keyCode == 13) {return validateForm();}" tabindex="10" id="formSubmit">

@@ -32,8 +32,11 @@
         <div class="formContainer defaultContainer">
             <h1>Create City</h1>
             <form action="city.html" method="get">
-                <label for="cityName">*City Name</label>
-                <input tabindex="9" type="text" id="cityName" name="cityName" required><br><br>
+                <label for="cityName">
+                    <font color="#FF2626">*</font>City Name
+                </label>
+                <input tabindex="9" type="text" id="cityName" name="cityName">
+                <label id="cityVerify" class="errorLabel"></label><br>
                 <div class="defaultControls formContainerControls">
                     <div class="formContainerSubmit">
                         <input  tabindex="10" value="submit" type="submit" onkeydown="if (event.keyCode == 13) {return validateForm();}" onclick="return validateForm();" id="formSubmit">

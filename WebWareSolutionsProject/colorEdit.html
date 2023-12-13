@@ -30,10 +30,13 @@
         <div class="formBackButton"><input onclick="history.back()" onkeydown="if (event.keyCode == 13) {history.back()}" value="Back" type="button" tabindex="8"></div> 
         <!-- webpage content goes here -->
         <div class="formContainer defaultContainer">
-            <h1>Edit Colour</h1>
+            <h1>Edit Color</h1>
             <form action="color.html" method="get">
-                <label for="ColorName">*Colour Name</label>
-                <input type="text" id="ColorName" name="ColorName" value="Red" tabindex="9" required><br><br>
+                <label for="ColorName">
+                    <font color="#FF2626">*</font>Color Name
+                </label>
+                <input type="text" id="ColorName" name="ColorName" value="Red" tabindex="9">
+                <label id="colorVerify" class="errorLabel"></label><br>
                 <div class="defaultControls formContainerControls">
                     <div class="formContainerSubmit">
                         <input value="submit" type="submit" onclick="return validateForm();" onkeydown="if (event.keyCode == 13) {return validateForm();}" tabindex="10" id="formSubmit">
@@ -46,5 +49,13 @@
 
         </div>
     </main>
+
+    <!-- Footer -->
+     <!-- Footer -->
+     <div id="footer">
+        <footer>
+            <p>This page was made by Amron Weeber</p>
+        </footer>
+    </div>
 </body>
 </html>

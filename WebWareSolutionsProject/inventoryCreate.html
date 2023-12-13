@@ -31,11 +31,14 @@
         <div class="formContainer defaultContainer defaultControls">
             <h1>Inventory Create Form</h1>
             <form action="index.html" method="get" onreset="return customClear();">
-                <label for="name">*Inventory Item:</label>
-                <input type="text" id="name" name="name" placeholder="Item to be added to Inventory" tabindex="11" required><br><br>
+                <label for="name">
+                    <font color="#FF2626">*</font>Inventory Item:
+                </label>
+                <input type="text" id="name" name="name" placeholder="Item to be added to Inventory" tabindex="11">
+                <label id="inventoryVerify" class="errorLabel"></label><br>
     
                 <label for="description">Description:</label>
-                <textarea type="text" id="description" name="description" class="LongText"  placeholder="Any additional information" tabindex="12" required></textarea><br><br>
+                <textarea type="text" id="description" name="description" class="LongText"  placeholder="Any additional information" tabindex="12"></textarea><br><br>
     
     
                 <div class="defaultControls formContainerControls">

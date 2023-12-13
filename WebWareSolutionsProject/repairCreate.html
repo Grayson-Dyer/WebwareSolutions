@@ -32,17 +32,26 @@
         <div class="formContainer defaultContainer defaultControls">
             <h1>Log Repair</h1>
             <form action="repairsAndInventory.html" method="get" onreset="return customClear();">
-                <label for="FullName">*Customer Name:</label>
-                <input type="text" id="FullName" name="FullName" value="John Johnson" placeholder="Full Name" tabindex="10" required><br><br>
+                <label for="FullName">
+                    <font color="#FF2626">*</font>Customer Name:
+                </label>
+                <input type="text" id="FullName" name="FullName" value="John Johnson" placeholder="Full Name" tabindex="10">
+                <label id="fullNameVerify" class="errorLabel"></label><br>
     
-                <label for="Warranty">*Warranty:</label>
-                <input type="text" id="Warranty" name="Warranty" value="yes" placeholder="yes/no" tabindex="11" required><br><br>
+                <label for="Warranty">
+                    <font color="#FF2626">*</font>Warranty:
+                </label>
+                <input type="text" id="Warranty" name="Warranty" value="yes" placeholder="yes/no" tabindex="11">
+                <label id="warrantyVerify" class="errorLabel"></label><br>
                 
                 <label for="warrantyInfo">Warranty Claim Information:</label>
                 <textarea id="warrantyInfo" class="LongText" value="He spilt a coffre on it lol"  name="warrantyInfo" placeholder="specifics for claims "  tabindex="12"></textarea><br><br>
     
-                <label for="RepairDate">*Repair Start Date:</label>
-                <input type="date" id="RepairDate" name="RepairDate" value="2012-09-15" tabindex="13" required><br><br>
+                <label for="RepairDate">
+                    <font color="#FF2626">*</font>Repair Start Date:
+                </label>
+                <input type="date" id="RepairDate" name="RepairDate" value="2012-09-15" tabindex="13">
+                <label id="dateVerify" class="errorLabel"></label><br>
 
                 
 

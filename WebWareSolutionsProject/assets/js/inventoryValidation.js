@@ -1,10 +1,12 @@
 function validateForm(){
     const itemName = document.getElementById("name").value;
-
+    const itemVerify = document.getElementById("itemVerify");
 
     if(!itemName ) {
-        alert("Inventory name cannot be blank")
+        itemVerify.innerHTML = "The item name cannot be blank.";
         return false;
     } 
+
+    itemVerify.innerHTML = "";
     return true;
 }

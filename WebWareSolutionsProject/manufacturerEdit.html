@@ -31,8 +31,11 @@
         <div class="formContainer defaultContainer">
             <h1>Edit Manufacturer</h1>
             <form action="manufacturer.html" method="get">
-                <label for="ManufacturerName">*Manufacturer Name</label>
-                <input type="text" id="ManufacturerName" tabindex="9" value="Honda" name="ManufacturerName" required><br><br>
+                <label for="ManufacturerName">
+                    <font color="#FF2626">*</font>Manufacturer Name
+                </label>
+                <input type="text" id="ManufacturerName" tabindex="9" value="Honda" name="ManufacturerName">
+                <label id="manufacturerVerify" class="errorLabel"></label><br>
                 <div class="defaultControls formContainerControls">
                     <div class="formContainerSubmit">
                         <input value="submit" type="submit" tabindex="10" onkeydown="if (event.keyCode == 13) {return validateForm();}" onclick="return validateForm();"  id="formSubmit">
