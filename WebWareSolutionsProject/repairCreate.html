@@ -11,7 +11,6 @@
     <!--  link to additional stylesheets or libraries here -->
 
     <!-- link to your JavaScript file here -->
-    <script src="assets/js/customerCreateScript.js" async></script>
     <script src="assets/js/repairValidation.js"></script>  
     <script src="assets/js/loginForm.js"></script>
     <!-- include additional JavaScript libraries here -->
@@ -37,12 +36,23 @@
                 </label>
                 <input type="text" id="FullName" name="FullName" value="John Johnson" placeholder="Full Name" tabindex="10">
                 <label id="fullNameVerify" class="errorLabel"></label><br>
-    
+
                 <label for="Warranty">
                     <font color="#FF2626">*</font>Warranty:
                 </label>
-                <input type="text" id="Warranty" name="Warranty" value="yes" placeholder="yes/no" tabindex="11">
+                <select id="Warranty" name="Warranty" value="yes" placeholder="yes/no" tabindex="11" >
+                    <option selected value="YES">Yes</option>
+                    <option value="NO">No</option>
+                </select>
                 <label id="warrantyVerify" class="errorLabel"></label><br>
+                
+                <label for="warrantyStart">Warranty Start Date:</label>
+                <input id="warrantyStart" name="warrantyEnd" type="date" id="calDateStart">
+                <label id="warrantyDateStartVerify" class="errorLabel"></label><br>
+
+                <label for="warrantyEnd">Warranty End Date:</label>
+                <input id="warrantyEnd" name="warrantyEnd" type="date" id="calDateEnd">
+                <label id="warrantyDateEndVerify" class="errorLabel"></label><br>
                 
                 <label for="warrantyInfo">Warranty Claim Information:</label>
                 <textarea id="warrantyInfo" class="LongText" value="He spilt a coffre on it lol"  name="warrantyInfo" placeholder="specifics for claims "  tabindex="12"></textarea><br><br>

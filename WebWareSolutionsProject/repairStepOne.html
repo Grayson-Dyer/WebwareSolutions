@@ -9,12 +9,22 @@
 
     <!--  link to additional stylesheets or libraries here -->
     <!-- link to your JavaScript file here -->
+    <script src="assets/js/loginForm.js"></script>
     <script src="assets/js/tableSelectRepairStepOne.js"></script>
     <script src="assets/js/loginForm.js"></script>
     <!-- include additional JavaScript libraries here -->
   </head>
   <body>
+
+    <div class="navbar" id="navbar">
+      <nav>
+          <ul>
+              <!-- Navbar items will be dynamically generated here -->
+            </ul>
+        </nav>
+    </div>
     <main>
+      
       <div class="stepPageGrid">
         <div class="stepPageHelp defaultContainer">
           <h1>Step 1</h1>
@@ -33,7 +43,7 @@
           <div class="reportPartsDivide">
             <div class="reportPartsDivide-Report formContainer">
               <h3>Repair Order</h3>
-              <form method="get" action="repairStepTwo.html">
+              <form method="get" action="report1Repair.html">
                 <div class="repairFormGrid">
                   <div class="repairFormLabelOne">
                     <label for="customerName">Customer Name:</label>
@@ -67,7 +77,7 @@
                       onclick="return validateForm()"
                       onkeydown="if (event.keyCode == 13) { return validateForm();}"
                       value="Submit"
-                    />
+                    >
                   </div>
                   <div class="repairFormClear">
                     <input
@@ -75,7 +85,15 @@
                       onclick="clearForm()"
                       onkeydown="if (event.keyCode == 13) {clearForm();}"
                       value="Clear"
-                    />
+                    >
+                  </div>
+                  <div class="repairFormSave">
+                    <input
+                      onclick="SaveState()"
+                      onkeydown="if (event.keyCode == 13) {SaveState();}"
+                      type="button"
+                      value="Save"
+                      >
                   </div>
                 </div>
               </form>
@@ -94,7 +112,7 @@
                     onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
                   >
                     <th>Name</th>
-                    <th>Colour</th>
+                    <th>Price</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -103,84 +121,84 @@
                     onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
                   >
                     <td>Piston</td>
-                    <td>Silver</td>
+                    <td>14.99</td>
                   </tr>
                   <tr
                     onclick="handleRowClick(this)"
                     onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
                   >
                     <td>Spark Plug</td>
-                    <td>Black</td>
+                    <td>25.99</td>
                   </tr>
                   <tr
                     onclick="handleRowClick(this)"
                     onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
                   >
                     <td>Carburetor</td>
-                    <td>Gold</td>
+                    <td>119.99</td>
                   </tr>
                   <tr
                     onclick="handleRowClick(this)"
                     onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
                   >
                     <td>Camshaft</td>
-                    <td>Steel</td>
+                    <td>251.99</td>
                   </tr>
                   <tr
                     onclick="handleRowClick(this)"
                     onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
                   >
                     <td>Fuel Filter</td>
-                    <td>Blue</td>
+                    <td>30.00</td>
                   </tr>
                   <tr
                     onclick="handleRowClick(this)"
                     onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
                   >
                     <td>Ignition Coil</td>
-                    <td>Red</td>
+                    <td>120.00</td>
                   </tr>
                   <tr
                     onclick="handleRowClick(this)"
                     onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
                   >
                     <td>Exhaust Valve</td>
-                    <td>Green</td>
+                    <td>50.99</td>
                   </tr>
                   <tr
                     onclick="handleRowClick(this)"
                     onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
                   >
                     <td>Oil Pump</td>
-                    <td>Yellow</td>
+                    <td>25.99</td>
                   </tr>
                   <tr
                     onclick="handleRowClick(this)"
                     onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
                   >
                     <td>Throttle Body</td>
-                    <td>Orange</td>
+                    <td>69.99</td>
                   </tr>
                   <tr
                     onclick="handleRowClick(this)"
                     onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
                   >
                     <td>Head Gasket</td>
-                    <td>Purple</td>
+                    <td>40.00</td>
                   </tr>
                   <tr
                     onclick="handleRowClick(this)"
                     onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
                   >
                     <td>Timing Belt</td>
-                    <td>Brown</td>
+                    <td>49.99</td>
                   </tr>
                   <tr
                     onclick="handleRowClick(this)"
                     onkeydown="if (event.keyCode == 13) {handleRowClick(this)}"
                   >
                     <td>Starter Motor</td>
-                    <td>Gray</td>
+                    <td>129.99</td>
                   </tr>
                 </tbody>
               </table>

@@ -127,9 +127,10 @@ function validateForm() {
         !modelValid ||
         !modelNumberValid ||
         !colourValid ||
-        !manufacturerValid) {
-            return false;
-        }
+        !manufacturerValid) 
+    {
+        return false;
+    }
 
     /*if( !equipName || 
         !equipSerial ||

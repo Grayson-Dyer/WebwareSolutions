@@ -1,5 +1,5 @@
 function validateForm() {
-    const countryName = document.getElementById("countryName");
+    const countryName = document.getElementById("countryName").value;
     const countryVerify = document.getElementById("countryVerify");
 
     if( !countryName ) {

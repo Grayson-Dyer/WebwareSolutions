@@ -1,5 +1,14 @@
 let selectedRow = null;
 let selectedRows = [];
+document.addEventListener('DOMContentLoaded', function () {
+    LoadState();
+    Array.from(document.querySelectorAll(".selected")).forEach(element => {
+        selectedRows.push(element);
+    });
+});
+
+
+
 
 
 function handleRowClick(row) {
@@ -12,8 +21,41 @@ function handleRowClick(row) {
         selectedRows.push(row);
     }
 
+
+
 }
 
+function SaveState() {
+    var selectedRows = document.querySelectorAll('.selected');
+
+    var selectedRowIndices = Array.from(selectedRows).map(function (row) {
+        return row.rowIndex; 
+    });
+
+    var currentUrl = window.location.href;
+
+    localStorage.setItem(currentUrl, JSON.stringify(selectedRowIndices));
+
+    window.location.href = 'repairsAndInventory.html';
+}
+
+function LoadState() {
+
+    var currentUrl = window.location.href;
+    var savedState = localStorage.getItem(currentUrl);
+
+    if (savedState) {
+        var selectedRowIndices = JSON.parse(savedState);
+
+        // Apply the 'selected' class to the previously selected rows
+        selectedRowIndices.forEach(function (index) {
+        var row = document.querySelector('table tbody').rows[index - 1];
+        if (row) {
+            row.classList.add('selected');
+        }
+        });
+    }
+}
 
 function clearForm() {
     selectedRows.forEach(row => {
