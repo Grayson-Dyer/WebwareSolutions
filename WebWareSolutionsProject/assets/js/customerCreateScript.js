@@ -10,53 +10,64 @@ const countriesData = {
   },
 };
 
-// Function to populate the Country drop-down list
+function populateCityDropdown() {
+  const citySelect = document.getElementById("city");
+  citySelect.innerHTML = ""; // Clear previous options
+
+  for (const country in countriesData) {
+    for (const province in countriesData[country]) {
+      for (const city of countriesData[country][province]) {
+        const option = document.createElement("option");
+        option.value = city;
+        option.textContent = city;
+        citySelect.appendChild(option);
+      }
+    }
+  }
+
+  // Add event listener for city change
+  citySelect.addEventListener("change", function () {
+    populateProvinceDropdown();
+  });
+
+}
+
+function populateProvinceDropdown() {
+  const citySelect = document.getElementById("city");
+  const provinceSelect = document.getElementById("province");
+  provinceSelect.innerHTML = ""; // Clear previous options
+
+  const selectedCity = citySelect.value;
+
+  for (const country in countriesData) {
+    for (const province in countriesData[country]) {
+      if (countriesData[country][province].includes(selectedCity)) {
+        const option = document.createElement("option");
+        option.value = province;
+        option.textContent = province;
+        provinceSelect.appendChild(option);
+      }
+    }
+  }
+
+  // Add event listener for province change
+  provinceSelect.addEventListener("change", function () {
+    populateCountryDropdown();
+  });
+}
+
 function populateCountryDropdown() {
   const countrySelect = document.getElementById("country");
-  for (const country in countriesData) {
+  const selectedCountry = countrySelect.value;
+
+  countrySelect.innerHTML = ""; // Clear previous options
+  for(const country in countriesData) {
     const option = document.createElement("option");
     option.value = country;
     option.textContent = country;
     countrySelect.appendChild(option);
   }
-  countrySelect.addEventListener("change", populateProvinceDropdown);
-}
-  
-// Function to populate the Province drop-down list based on the selected country
-function populateProvinceDropdown() {
-  const countrySelect = document.getElementById("country");
-  const provinceSelect = document.getElementById("province");
-  provinceSelect.innerHTML = ""; // Clear previous options
-  const selectedCountry = countrySelect.value;
-  
-  if (selectedCountry in countriesData) {
-    for (const province in countriesData[selectedCountry]) {
-      const option = document.createElement("option");
-      option.value = province;
-      option.textContent = province;
-      provinceSelect.appendChild(option);
-    }
-    populateCityDropdown();
 
-  }
-}
-
-function populateCityDropdown() {
-  const countrySelect = document.getElementById("country");
-  const provinceSelect = document.getElementById("province"); // Grayson Dyer added this
-  const citySelect = document.getElementById("city");
-  citySelect.innerHTML = ""; // Clear previous options
-  const selectedCountry = countrySelect.value;
-  const selectedProvince = provinceSelect.value; // Grayson Dyer added this.
-  // Had to remove foreach loop to make this work - Grayson Dyer
-  if (selectedCountry in countriesData) {
-    for (const city of countriesData[selectedCountry][selectedProvince]) { // Added the Selected Province
-      const option = document.createElement("option");
-      option.value = city;
-      option.textContent = city;
-      citySelect.appendChild(option);
-    }
-  }
 }
 
 // Function for validating the contact number.
@@ -180,12 +191,9 @@ function validateForm() {
 
 
 function intializeForm() {
-  populateCountryDropdown()
-  const countrySelect = document.getElementById("country");
-  countrySelect.querySelector("option[value='Canada']").selected = true;
-  populateProvinceDropdown();
   populateCityDropdown();
-  document.getElementById("province").addEventListener("change", populateCityDropdown);
+  populateProvinceDropdown();
+  populateCountryDropdown();
 }
 
 function customClear() {

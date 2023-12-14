@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provinces</title>
+    <!-- link to your CSS file here -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!--  link to additional stylesheets or libraries here -->
+    <!-- link to your JavaScript file here -->
+    <script src="assets/js/tableSelectScript.js"></script>
+    <script src="assets/js/loginForm.js"></script>
+    <!-- include additional JavaScript libraries here -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar">
+        <nav>
+            <ul>
+                <!-- Navbar items will be dynamically generated here -->
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page Content -->
+    <main>
+        <!-- webpage content goes here -->
+        <div class="stepPageGrid">
+            <div class="stepPageHelp defaultContainer">
+                <h1>Step 4</h1>
+                <h2>of 5</h2>
+                <h3>Help</h3>
+                <p>
+                  Select the equipment that the customer needs repaired.
+                </p>
+            </div>
+            <div class="stepPageContent">
+                <div class="formBackButton"><input tabindex="8" onclick="history.back()" onkeydown="if (event.keyCode == 13) {history.back()}" value="Back" type="button"></div> 
+
+                <div class="defaultContainer">
+                    <h1>Provinces</h1>
+                    <div class="defaultTable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Equipment</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="8">
+                                    <td>Lawnmaster22</td>
+                                </tr>
+                                <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="9">
+                                    <td>Weedmaster02</td>
+                                </tr>
+                                <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="10">
+                                    <td>Yardbeast</td>
+                                </tr>
+                                <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="11">
+                                    <td>Bushmaster21</td>
+                                </tr>
+                                <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="12">
+                                    <td>YardWorker</td>
+                                </tr>
+                                <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="13">
+                                    <td>YardrRelaxer</td>
+                                </tr>
+                                <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="14">
+                                    <td>YardWacker</td>
+                                </tr>
+                                <tr onclick="handleRowClick(this)" onkeydown="if (event.keyCode == 13) {handleRowClick(this)}" tabindex="15">
+                                    <td>YardrRelaxer</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+        <!--Chose to keep these as cityContainer[X] since I'd rather not mess with the style sheet, and nothing new seems needed yet.-->
+                    <div style="display: block; width: 90%;">
+                        <div style="display: block; padding: 10px; " class="defaultControls">
+                            <a style="width: 90%; margin: auto; padding: 10px;"  id="defaultEditButton" href="salesStepFive.html" tabindex="16">Next Step</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+
+</body>
+</html>

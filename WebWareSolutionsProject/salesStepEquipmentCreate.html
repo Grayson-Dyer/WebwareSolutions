@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Name - Customer Create</title>
+    <!-- link to your CSS file here -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!--  link to additional stylesheets or libraries here -->
+
+    <!-- link to your JavaScript file here -->
+    <script src="assets/js/equipmentValidation.js"></script>
+    <script src="assets/js/loginForm.js"></script>
+    <!-- include additional JavaScript libraries here -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar">
+        <nav>
+            <ul>
+                <!-- Navbar items will be dynamically generated here -->
+            </ul>
+        </nav>
+    </div>
+
+    
+    <main>
+        <div class="stepPageGrid">
+            <div class="stepPageHelp defaultContainer">
+                <h1>Step 4</h1>
+                <h2>of 5</h2>
+                <h3>Help</h3>
+                <p>
+                  Fill out the equipment create form
+                </p>
+            </div>
+            <div class="stepPageContent">
+                <div  class="formBackButton"><input tabindex="8" onclick="history.back()" onkeydown="if (event.keyCode == 13) {history.back()}" value="Back" type="button"></div>
+                <div class="formContainer defaultContainer defaultControls">
+                    <h1>Customer Equipment Create Form</h1>
+                    <form action="salesStepFive.html" method="get" onreset="return customClear();">
+                        <label for="name">
+                            <font color="#FF2626">*</font>Name:
+                        </label>
+                        <input type="text" id="name" name="name" value="Lawnmower22" placeholder="Lawnmower22" tabindex="9">
+                        <label id="nameVerify" class="errorLabel"></label><br>
+            
+                        <label for="serial_number">
+                            <font color="#FF2626">*</font>Serial Number:
+                        </label>
+                        <input type="text" id="serial_number" name="serial_number"  value="HDJ22" placeholder="HDJ22" tabindex="10">
+                        <label id="serialVerify" class="errorLabel"></label><br>
+            
+                        <label for="purchase_date">
+                            <font color="#FF2626">*</font>Purchase Date:
+                        </label>
+                        <input type="date" value="2022-09-12" id="purchase_date" name="purchase_date" tabindex="11">
+                        <label id="dateVerify" class="errorLabel"></label><br>
+        
+                        <label for="warranty">
+                            <font color="#FF2626">*</font>Warranty:
+                        </label>
+                        <input type="text" id="warranty" name="warranty" value="3 Years" placeholder="3 Years" tabindex="12">
+                        <label id="warrantyVerify"  class="errorLabel"></label><br>
+        
+                        <label for="model">
+                            <font color="#FF2626">*</font>Model:
+                        </label>
+                        <input type="text" id="model" value="Lawnmower" name="model" placeholder="Lawnmower" tabindex="13">
+                        <label id="modelVerify" class="errorLabel"></label><br>
+        
+                        <label for="model_number">
+                            <font color="#FF2626">*</font>Model Number:
+                        </label>
+                        <input type="number" value="22" id="model_number" name="model_number" placeholder="22" tabindex="14">
+                        <label id="modelNumberVerify" class="errorLabel"></label><br>
+                        
+                        <label for="colour">
+                            <font color="#FF2626">*</font>Colour:
+                        </label>
+                        <select id="colour" name="colour" placeholder="none" tabindex="15">
+                            <option  value="">none</option>
+                            <option selected value="Red">Red</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                        </select> 
+                        <div class="formNewDataElement">
+                            <a href="colorCreate.html" tabindex="16"><input type="button" tabindex="-1" value="+"></a>
+                        </div>
+                        <label id="colourVerify" class="errorLabel"></label><br>
+        
+                        <label for="manufacturer">
+                            <font color="#FF2626">*</font>Manufacturer:
+                        </label>
+                        <select  id="manufacturer" name="manufacturer" tabindex="17" placeholder="none">
+                            <option  value="">none</option>
+                            <option selected value="Honda">Honda</option>
+                            <option value="Porsche">Porsche</option>
+                            <option value="Mercedes">Mercedes</option>
+                            <option value="GM">GM</option>
+                        </select>
+                        <div class="formNewDataElement">
+                            <a href="manufacturerCreate.html" tabindex="18"><input type="button" tabindex="-1" value="+"></a>
+                        </div>
+                        <label id="manufacturerVerify" class="errorLabel"></label><br>
+            
+                        <div class="defaultControls formContainerControls">
+                            <div class="formContainerSubmit">
+                                <input value="submit" type="submit" tabindex="19" onclick="return validateForm();"  onkeydown="if (event.keyCode == 13) {return validateForm();}" id="formSubmit">
+                            </div>
+                            <div class="formContainerClear">
+                                <input value="clear" type="reset" tabindex="20" id="formClear">
+                            </div>
+                        </div> 
+                    </form>    
+                </div>
+            </div>
+
+        </div>
+        
+    </main>
+</body>
