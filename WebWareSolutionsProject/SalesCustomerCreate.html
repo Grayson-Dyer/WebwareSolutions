@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Name - Customer Create</title>
+    <!-- link to your CSS file here -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!--  link to additional stylesheets or libraries here -->
+
+    <!-- link to your JavaScript file here -->
+    <script src="assets/js/customerCreateScript.js" async></script>
+    <script src="assets/js/loginForm.js"></script>
+    <!-- include additional JavaScript libraries here -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar">
+        <nav>
+            <ul>
+                <!-- Navbar items will be dynamically generated here -->
+            </ul>
+        </nav>
+    </div>
+
+
+
+    <main>
+        <div class="stepPageGrid">
+
+            <div class="stepPageHelp defaultContainer">
+                <h1>Step 2</h1>
+                <h2>of 5</h2>
+                <h3>Help</h3>
+                <p>
+                  Fill out the customer information form, then click submit
+                </p>
+            </div>
+            <div class="stepPageContent">
+                <div class="formBackButton"><input tabindex="8" onclick="history.back()" onkeydown="if (event.keyCode == 13) {history.back()}" value="Back" type="button"></div> 
+                <div class="formContainer defaultContainer defaultControls">
+                    <h1>Customer Information Form</h1>
+                    <form action="index.html" method="get" onreset="return customClear();">
+                        <label for="first_name">*First Name:</label>
+                        <input value="John" type="text" id="first_name" name="first_name" placeholder="John" tabindex="9" required><br><br>
+            
+                        <label for="last_name">*Last Name:</label>
+                        <input type="text" id="last_name" name="last_name" value="Doe" placeholder="Doe" tabindex="10" required><br><br>
+            
+                        <label for="contact_number">*Contact Number:</label>
+                        <input type="tel" id="contact_number" name="contact_number" value="01234567890" placeholder="+01234567890" tabindex="11" required><br><br>
+            
+                        <label for="email">*Email:</label>
+                        <input type="email" id="email" name="email" value="JohnDoe@email.com" placeholder="JohnDoe@email.com" tabindex="12" required><br><br>
+    
+                        <label for="street_address">*Street Address:</label>
+                        <input type="text" id="street_address" value="123 Baker Street" name="street_address" placeholder="123 Baker Street" tabindex="13" required><br><br>
+    
+                        <label for="city">City:</label>
+                        <select id="city" name="city" tabindex="14">
+                        </select>
+                        <div class="formNewDataElement">
+                            <a href="cityCreate.html" tabindex="15"><input type="button" tabindex="-1" value="+"></a>
+                        </div><br><br>
+    
+                        <label for="province">Province:</label>
+                        <select id="province" name="province" tabindex="16">
+                        </select>
+                        <div class="formNewDataElement">
+                            <a href="provinceCreate.html" tabindex="17"><input type="button" tabindex="-1" value="+"></a>
+                        </div><br><br>
+            
+                        <label for="country">Country:</label>
+                        <select id="country" name="country" tabindex="18">
+                        </select>
+                        <div class="formNewDataElement">
+                            <a href="countryCreate.html" tabindex="19"><input type="button" tabindex="-1" value="+"></a>
+                        </div><br><br>
+    
+                        
+                        <div class="defaultControls formContainerControls">
+                            <div class="formContainerSubmit">
+                                <input value="Repair" type="submit" a href="repairCreate.html" tabindex="20" onclick="return validateForm();" onkeydown="if (event.keyCode == 13) {return validateForm();}" id="formSubmit">
+                            </div>
+                            <div class="formContainerClear">
+                                <input value="clear" type="reset" id="formClear" tabindex="21">
+                            </div>
+                        </div>  
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

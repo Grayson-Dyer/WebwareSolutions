@@ -11,13 +11,16 @@ window.onload = function() {
         if (userRole === "admin") {
             navbarItems.innerHTML = `
                 <li>
-                    <a href="repairsAndInventory.html" tabindex="1">Active Repair</a>
+                    <a href="salesStepZero.html" tabindex="1">Begin Sale</a>
+                </li>
+                <li>
+                    <a href="repairsAndInventory.html" tabindex="2">Active Repair</a>
                 </li>
                 <li class="navbar-item-1">
-                    <a tabindex="2" href="equipment.html">Customer & Equipment</a>
+                    <a tabindex="3" href="equipment.html">Customer & Equipment</a>
                 </li>
                 <li class="dropdown">
-                    <a tabindex="3" href="#" class="dropbtn">Maintenance</a>
+                    <a tabindex="4" href="#" class="dropbtn">Maintenance</a>
                     <div class="dropdown-content">
                         <a href="province.html">Province</a>
                         <a href="country.html">Country</a>
@@ -29,19 +32,22 @@ window.onload = function() {
                     </div>
                 </li>
                 <li>
-                    <button tabindex="4" onclick="logout()">Logout</button>
+                    <button tabindex="5" onclick="logout()">Logout</button>
                 </li>
             `;
         } else if (userRole === "salesrep") {
             navbarItems.innerHTML = `
-                <li class="navbar-item-1">
-                    <a tabindex="1" href="equipment.html">Customer & Equipment</a>
+                <li>
+                    <a href="salesStepZero.html" tabindex="1">Begin Sale</a>
                 </li>
                 <li class="navbar-item-1">
-                    <a tabindex="2" href="CompletedRepairs.html">Completed Repairs</a>
+                    <a tabindex="2" href="equipment.html">Customer & Equipment</a>
+                </li>
+                <li class="navbar-item-1">
+                    <a tabindex="3" href="CompletedRepairs.html">Completed Repairs</a>
                 </li>
                 <li>
-                    <button tabindex="3" onclick="logout()">Logout</button>
+                    <button tabindex="4" onclick="logout()">Logout</button>
                 </li>
             `;
         } else if (userRole === "technician") {

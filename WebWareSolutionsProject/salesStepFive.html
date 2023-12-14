@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repair Create</title>
+    <!-- link to your CSS file here -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!--  link to additional stylesheets or libraries here -->
+
+    <!-- link to your JavaScript file here -->
+    <script src="assets/js/salesSteprepairValidation.js"></script>  
+    <script src="assets/js/loginForm.js"></script>
+    <!-- include additional JavaScript libraries here -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar">
+        <nav>
+            <ul>
+                <!-- Navbar items will be dynamically generated here -->
+            </ul>
+        </nav>
+    </div>
+
+
+    <main>
+        <div class="stepPageGrid">
+            <div class="stepPageHelp defaultContainer">
+                <h1>Step 5</h1>
+                <h2>of 5</h2>
+                <h3>Help</h3>
+                <p>
+                  Fill out the repair form for the information the technicians will need.
+                </p>
+            </div>
+            <div class="stepPageContent">
+                <div  class="formBackButton"><input tabindex="9" onclick="history.back()" onkeydown="if (event.keyCode == 13) {history.back()}" value="Back" type="button"></div> 
+                <div class="formContainer defaultContainer defaultControls">
+                    <h1>Log Repair</h1>
+                    <form action="report1Receipt.html" method="get" onreset="return customClear();">
+                        <label for="FullName">
+                            <font color="#FF2626">*</font>Customer Name:
+                        </label>
+                        <label type="text" id="FullName" name="FullName" placeholder="Full Name" tabindex="10"> John Johnson</label>
+                        <label id="fullNameVerify" class="errorLabel"></label><br>
+        
+                        <label for="Warranty">
+                            <font color="#FF2626">*</font>Warranty:
+                        </label>
+                        <select id="Warranty" name="Warranty" value="yes" placeholder="yes/no" tabindex="11" >
+                            <option selected value="YES">Yes</option>
+                            <option value="NO">No</option>
+                        </select>
+                        <label id="warrantyVerify" class="errorLabel"></label><br>
+                        
+                        <label for="warrantyStart">Warranty Start Date:</label>
+                        <input id="warrantyStart" value="2022-01-01" name="warrantyEnd" type="date" id="calDateStart">
+                        <label id="warrantyDateStartVerify" class="errorLabel"></label><br>
+        
+                        <label for="warrantyEnd">Warranty End Date:</label>
+                        <input id="warrantyEnd" value="2022-01-02" name="warrantyEnd" type="date" id="calDateEnd">
+                        <label id="warrantyDateEndVerify" class="errorLabel"></label><br>
+                        
+                        <label for="warrantyInfo">Warranty Claim Information:</label>
+                        <textarea id="warrantyInfo" class="LongText" value="He spilt a coffre on it lol"  name="warrantyInfo" placeholder="specifics for claims "  tabindex="12"></textarea><br><br>
+            
+                        <label for="RepairDate">
+                            <font color="#FF2626">*</font>Repair Start Date:
+                        </label>
+                        <input  value="2023-01-01" type="date" id="RepairDate" name="RepairDate" value="2012-09-15" tabindex="13">
+                        <label id="dateVerify" class="errorLabel"></label><br>
+        
+                        
+        
+                        
+                        <div class="defaultControls formContainerControls">
+                            <div class="formContainerSubmit">
+                                <input id="repairs-create-button" type="submit" tabindex="14" value="submit" onclick="return validateForm();" onkeydown="if (event.keyCode == 13) {return validateForm();}">
+                            </div>
+                            <div class="formContainerClear">
+                                <input value="clear" type="reset" id="formClear" tabindex="15">
+                            </div>
+                        </div>  
+                    </form>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+    </main>
+</body>
